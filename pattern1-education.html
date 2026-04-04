@@ -919,12 +919,12 @@
       margin-top: 4px;
     }
 
-    /* Part B: Featured stories — alternating layout */
+    /* Part B: Featured stories */
     .featured-stories {
       display: flex;
       flex-direction: column;
-      gap: 40px;
-      margin-bottom: 56px;
+      gap: 32px;
+      margin-bottom: 48px;
     }
 
     .featured-card {
@@ -933,72 +933,70 @@
       border-radius: 12px;
       border-left: 4px solid var(--sky);
       box-shadow: 0 2px 12px rgba(45,45,58,0.06);
-      overflow: hidden;
     }
 
     .featured-card:nth-child(even) {
-      border-left: 4px solid var(--purple);
+      border-left-color: var(--purple);
     }
 
-    .featured-card-header {
+    .fc-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 12px;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
-    .featured-avatar {
-      width: 52px;
-      height: 52px;
+    .fc-header img {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
     }
 
-    .featured-meta .featured-name {
+    .fc-name {
       font-family: var(--font-headline);
       font-weight: 700;
       font-size: 15px;
       color: var(--charcoal);
     }
 
-    .featured-meta .featured-role {
+    .fc-role {
       font-size: 12px;
       color: rgba(45,45,58,0.5);
     }
 
-    .featured-headline-number {
+    .fc-number {
       font-family: var(--font-display);
-      font-size: 28px;
+      font-size: 24px;
       color: var(--sky);
-      display: block;
-      line-height: 1.3;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
-    .featured-ba {
+    .fc-before {
       font-size: 13px;
-      line-height: 2.0;
-      color: var(--charcoal);
-      margin-bottom: 8px;
-    }
-
-    .featured-ba .pain {
       color: var(--coral);
+      line-height: 1.8;
+      margin-bottom: 6px;
     }
 
-    .featured-ba .result {
+    .fc-after {
+      font-size: 13px;
+      color: var(--charcoal);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .fc-after strong {
       color: var(--sky);
-      font-weight: 700;
     }
 
-    .featured-quote {
+    .fc-quote {
       font-size: 13px;
       font-style: italic;
-      color: rgba(45,45,58,0.6);
+      color: rgba(45,45,58,0.55);
       padding-left: 14px;
-      border-left: 2px solid rgba(107,184,224,0.3);
-      line-height: 1.9;
+      border-left: 2px solid var(--sky);
+      line-height: 1.8;
     }
 
     /* Part D: More Success Numbers — compact grid */
@@ -1619,75 +1617,51 @@
         </div>
       </div>
 
-      <!-- Part B: Featured Stories (4 detailed cards, alternating layout) -->
+      <!-- Part B: Featured Stories -->
       <div class="featured-stories">
 
-        <!-- 1. ともかさん -->
         <article class="featured-card">
-          <div class="featured-card-header">
-            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
-            <div class="featured-meta">
-              <div class="featured-name">ともかさん</div>
-              <div class="featured-role">心理技術コーチ</div>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
+            <div><div class="fc-name">ともかさん</div><div class="fc-role">心理技術コーチ</div></div>
           </div>
-          <span class="featured-headline-number">7,300万</span>
-          <p class="featured-ba">
-            <span class="pain">年収2,000万円で6年間壁。「やれること全部やり尽くした」</span><br>
-            → こだわりを捨てずに1年で累計<span class="result">7,300万円</span>。単価10倍（66万→550万）。稼働1/10。
-          </p>
-          <p class="featured-quote">「10年前の自分には本当にどう考えていいかわかんないレベル」</p>
+          <div class="fc-number">7,300万</div>
+          <p class="fc-before">年収2,000万円で6年間壁。「やれること全部やり尽くした」</p>
+          <p class="fc-after">こだわりを捨てずに1年で累計<strong>7,300万円</strong>。単価10倍（66万→550万）。稼働1/10。</p>
+          <p class="fc-quote">「10年前の自分には本当にどう考えていいかわかんないレベル」</p>
         </article>
 
-        <!-- 2. 俊介さん -->
         <article class="featured-card">
-          <div class="featured-card-header">
-            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
-            <div class="featured-meta">
-              <div class="featured-name">俊介さん</div>
-              <div class="featured-role">マインドコーチ / パリコレアーティスト</div>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
+            <div><div class="fc-name">俊介さん</div><div class="fc-role">マインドコーチ / パリコレアーティスト</div></div>
           </div>
-          <span class="featured-headline-number">月商8桁 x 3ヶ月連続</span>
-          <p class="featured-ba">
-            <span class="pain">紹介のみで年収2,000〜3,000万。口座残高3,000円の経験</span><br>
-            → <span class="result">3ヶ月連続月商8桁</span>。年収5,000〜6,000万UP。パリコレ出演。Zepp東京1,000人。
-          </p>
-          <p class="featured-quote">「布団の中で見て、ガチのこと言ってると思って起き上がった」</p>
+          <div class="fc-number">3ヶ月連続 月商8桁</div>
+          <p class="fc-before">紹介のみで年収2,000〜3,000万。口座残高3,000円の経験</p>
+          <p class="fc-after"><strong>3ヶ月連続月商8桁</strong>。年収5,000〜6,000万UP。パリコレ出演。Zepp東京1,000人。</p>
+          <p class="fc-quote">「布団の中で見て、ガチのこと言ってると思って起き上がった」</p>
         </article>
 
-        <!-- 3. みゆさん -->
         <article class="featured-card">
-          <div class="featured-card-header">
-            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
-            <div class="featured-meta">
-              <div class="featured-name">みゆさん</div>
-              <div class="featured-role">女性起業家コンサル / 自動化の専門家</div>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
+            <div><div class="fc-name">みゆさん</div><div class="fc-role">女性起業家コンサル / 自動化の専門家</div></div>
           </div>
-          <span class="featured-headline-number">月商1,680万</span>
-          <p class="featured-ba">
-            <span class="pain">インスタ集客で年収4,000万。SNS毎日投稿で家庭崩壊の危機</span><br>
-            → セミナーゼロで最高<span class="result">月商1,680万</span>。10ヶ月で8,900万。フリースクール開校。
-          </p>
-          <p class="featured-quote">「売れている人を忙しくさせてしまうやり方を教えていた罪悪感から解放された」</p>
+          <div class="fc-number">月商1,680万</div>
+          <p class="fc-before">インスタ集客で年収4,000万。SNS毎日投稿で家庭崩壊の危機</p>
+          <p class="fc-after">セミナーゼロで最高<strong>月商1,680万</strong>。10ヶ月で8,900万。フリースクール開校。</p>
+          <p class="fc-quote">「売れている人を忙しくさせてしまうやり方を教えていた罪悪感から解放された」</p>
         </article>
 
-        <!-- 4. 白井さん -->
         <article class="featured-card">
-          <div class="featured-card-header">
-            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
-            <div class="featured-meta">
-              <div class="featured-name">白井さん</div>
-              <div class="featured-role">ダイエットコンサル</div>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
+            <div><div class="fc-name">白井さん</div><div class="fc-role">ダイエットコンサル</div></div>
           </div>
-          <span class="featured-headline-number">累計7,000万</span>
-          <p class="featured-ba">
-            <span class="pain">年収3,000〜4,000万。広告外注で100万以上失敗のトラウマ</span><br>
-            → <span class="result">累計7,000万</span>。最高月収1,300万。完全自動化。再婚・結婚式2回。
-          </p>
-          <p class="featured-quote">「私でもできた」</p>
+          <div class="fc-number">累計7,000万</div>
+          <p class="fc-before">年収3,000〜4,000万。広告外注で100万以上失敗のトラウマ</p>
+          <p class="fc-after"><strong>累計7,000万</strong>。最高月収1,300万。完全自動化。再婚・結婚式2回。</p>
+          <p class="fc-quote">「私でもできた」</p>
         </article>
 
       </div>

@@ -788,105 +788,80 @@
     .featured-stories {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      margin-bottom: 56px;
+      gap: 24px;
+      margin-bottom: 48px;
     }
 
     .featured-card {
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.05);
       border-radius: 12px;
-      padding: 28px 24px;
-      position: relative;
-      border-left: 3px solid transparent;
-      background-clip: padding-box;
+      padding: 24px 20px;
+      border-left: 4px solid var(--sky);
     }
 
-    .featured-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      border-radius: 3px 0 0 3px;
-      background: var(--grad-funnel);
+    .featured-card:nth-child(even) {
+      border-left-color: var(--purple);
     }
 
-    .featured-card__header {
+    .fc-header {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       margin-bottom: 16px;
     }
 
-    .featured-card__avatar {
-      width: 56px;
-      height: 56px;
+    .fc-header img {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
       border: 2px solid rgba(107,184,224,.25);
     }
 
-    .featured-card__meta {
-      flex: 1;
-    }
-
-    .featured-card__name {
+    .fc-name {
       font-family: var(--font-headline);
       font-weight: 700;
       font-size: 15px;
       color: #fff;
-      margin-bottom: 2px;
     }
 
-    .featured-card__industry {
-      font-size: 11.5px;
-      color: var(--blue);
-      font-weight: 600;
-    }
-
-    .featured-card__flow {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 13px;
-      line-height: 1.8;
-      flex-wrap: wrap;
-    }
-
-    .featured-card__before {
-      color: var(--coral);
-      opacity: 0.85;
-    }
-
-    .featured-card__arrow {
-      color: rgba(255,255,255,.25);
+    .fc-role {
       font-size: 12px;
-      flex-shrink: 0;
+      color: var(--blue);
     }
 
-    .featured-card__after {
-      color: rgba(255,255,255,.72);
-    }
-
-    .featured-card__headline {
+    .fc-number {
       font-family: var(--font-display);
-      font-size: 28px;
-      background: var(--grad-cta);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.3;
-      margin-top: 8px;
+      font-size: 24px;
+      color: var(--sky);
+      margin-bottom: 12px;
     }
 
-    .featured-card__screenshot {
-      margin-top: 16px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.06);
-      width: 100%;
+    .fc-before {
+      font-size: 13px;
+      color: var(--coral);
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+
+    .fc-after {
+      font-size: 13px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .fc-after strong {
+      color: var(--sky);
+    }
+
+    .fc-quote {
+      font-size: 13px;
+      font-style: italic;
+      color: rgba(255,255,255,.45);
+      padding-left: 14px;
+      border-left: 2px solid var(--sky);
+      line-height: 1.8;
     }
 
     /* --- Part E: Compact success stories --- */
@@ -1786,75 +1761,47 @@
         </div>
       </div>
 
-      <!-- Part C: Featured Stories (4 main cards) -->
+      <!-- Part C: Featured Stories -->
       <div class="featured-stories">
 
-        <!-- 三浦さん -->
         <div class="featured-card">
-          <div class="featured-card__header">
-            <img class="featured-card__avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/KJj03Qtg0kAno1q4jEpYt6mBzpyYq2O5wLPBgDJc.jpg" alt="三浦さん" loading="lazy">
-            <div class="featured-card__meta">
-              <h3 class="featured-card__name">三浦さん</h3>
-              <p class="featured-card__industry">エアコンクリーニングFC</p>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/KJj03Qtg0kAno1q4jEpYt6mBzpyYq2O5wLPBgDJc.jpg" alt="三浦さん" loading="lazy">
+            <div><div class="fc-name">三浦さん</div><div class="fc-role">エアコンクリーニングFC</div></div>
           </div>
-          <div class="featured-card__flow">
-            <span class="featured-card__before">3本動画ローンチで月3〜5件面談。キャッシュフロー厳しい</span>
-            <span class="featured-card__arrow">→</span>
-            <span class="featured-card__after">広告開始3〜4日で初回面談。初月2,000万超。累計1.2億</span>
-          </div>
-          <span class="featured-card__headline">広告費30万でROAS 1,000%</span>
+          <div class="fc-number">ROAS 1,000%</div>
+          <p class="fc-before">3本動画ローンチで月3〜5件面談。キャッシュフロー厳しい</p>
+          <p class="fc-after">広告開始3〜4日で初回面談。初月<strong>2,000万超</strong>。累計1.2億</p>
         </div>
 
-        <!-- りおなさん -->
         <div class="featured-card">
-          <div class="featured-card__header">
-            <img class="featured-card__avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hKu5Wy9M4MrxZ2yiaOSCkjVpqQteSwf6gbfPjPOf.jpg" alt="りおなさん" loading="lazy">
-            <div class="featured-card__meta">
-              <h3 class="featured-card__name">りおなさん</h3>
-              <p class="featured-card__industry">マネースクール</p>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hKu5Wy9M4MrxZ2yiaOSCkjVpqQteSwf6gbfPjPOf.jpg" alt="りおなさん" loading="lazy">
+            <div><div class="fc-name">りおなさん</div><div class="fc-role">マネースクール</div></div>
           </div>
-          <div class="featured-card__flow">
-            <span class="featured-card__before">毎日SNS投稿で最高月商600万が限界。「今日個別相談来るかな」の不安</span>
-            <span class="featured-card__arrow">→</span>
-            <span class="featured-card__after">月商1,200万。1年間LP変更なし。海外滞在6週間でも売上継続</span>
-          </div>
-          <span class="featured-card__headline">1年間LP変更なしでROAS 500〜700%</span>
+          <div class="fc-number">ROAS 500〜700%</div>
+          <p class="fc-before">毎日SNS投稿で最高月商600万が限界。「今日個別相談来るかな」の不安</p>
+          <p class="fc-after"><strong>月商1,200万</strong>。1年間LP変更なし。海外滞在6週間でも売上継続</p>
         </div>
 
-        <!-- ともかさん (with screenshot) -->
         <div class="featured-card">
-          <div class="featured-card__header">
-            <img class="featured-card__avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
-            <div class="featured-card__meta">
-              <h3 class="featured-card__name">ともかさん</h3>
-              <p class="featured-card__industry">心理技術コーチ</p>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
+            <div><div class="fc-name">ともかさん</div><div class="fc-role">心理技術コーチ</div></div>
           </div>
-          <div class="featured-card__flow">
-            <span class="featured-card__before">年収2,000万で6年間壁。他社コンサルに「人数増やせ」と言われるだけ</span>
-            <span class="featured-card__arrow">→</span>
-            <span class="featured-card__after">1年で7,300万。単価10倍（66万→550万）。稼働1/10</span>
-          </div>
-          <span class="featured-card__headline">単価10倍で6年間の壁を突破</span>
+          <div class="fc-number">7,300万</div>
+          <p class="fc-before">年収2,000万で6年間壁。他社コンサルに「人数増やせ」と言われるだけ</p>
+          <p class="fc-after">単価10倍（66万→550万）。<strong>1年で7,300万</strong>。稼働1/10</p>
         </div>
 
-        <!-- 今田さん -->
         <div class="featured-card">
-          <div class="featured-card__header">
-            <img class="featured-card__avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/loUP3SzBktqFGbNGaBFgsCTOgNW92eJ5zd6kOuD3.jpg" alt="今田さん" loading="lazy">
-            <div class="featured-card__meta">
-              <h3 class="featured-card__name">今田さん</h3>
-              <p class="featured-card__industry">美容サロンコンサル</p>
-            </div>
+          <div class="fc-header">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/loUP3SzBktqFGbNGaBFgsCTOgNW92eJ5zd6kOuD3.jpg" alt="今田さん" loading="lazy">
+            <div><div class="fc-name">今田さん</div><div class="fc-role">美容サロンコンサル</div></div>
           </div>
-          <div class="featured-card__flow">
-            <span class="featured-card__before">年商3,000万。単価8万×月50件で疲弊。高単価にする方法は学んでいたが踏み切れず</span>
-            <span class="featured-card__arrow">→</span>
-            <span class="featured-card__after">初回ウェビナーで1,200万成約。認定コンサル制度で自動化。ROAS 500%</span>
-          </div>
-          <span class="featured-card__headline">初回ウェビナーだけで1,200万成約</span>
+          <div class="fc-number">1,200万成約</div>
+          <p class="fc-before">年商3,000万。単価8万×月50件で疲弊。高単価は学んでいたが踏み切れず</p>
+          <p class="fc-after">初回ウェビナーだけで<strong>1,200万成約</strong>。認定コンサル制度で自動化。ROAS 500%</p>
         </div>
 
       </div>
