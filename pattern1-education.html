@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>売れ続けるシナリオ 無料オンライン講座 | 8桁ファネルホルダー</title>
+  <meta name="description" content="SNS集客に人生を捧げなくても、ファネルが24時間365日あなたの代わりに集客・教育・販売を行い、月商8桁を達成する方法を無料で公開します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       CSS Custom Properties — Brand Bible v2.1
+       ============================================ */
+    :root {
+      --sky: #6BB8E0;
+      --blue: #7B8EC8;
+      --purple: #9B7BB8;
+      --violet: #8A6AAF;
+      --dark: #0B0B16;
+      --charcoal: #2D2D3A;
+      --light: #F5F6FA;
+      --snow: #FAFBFE;
+      --coral: #E07058;
+      --green: #3CC494;
+
+      --grad-funnel: linear-gradient(180deg, #6BB8E0 0%, #7B8EC8 40%, #9B7BB8 75%, #8A6AAF 100%);
+      --grad-cta: linear-gradient(135deg, #6BB8E0 0%, #7B8EC8 50%, #9B7BB8 100%);
+      --grad-horizon: linear-gradient(90deg, #6BB8E0, #7B8EC8, #9B7BB8, #8A6AAF);
+      --grad-subtle: linear-gradient(135deg, rgba(107,184,224,.08), rgba(123,142,200,.06), rgba(155,123,184,.08));
+
+      --font-display: 'DM Serif Display', serif;
+      --font-headline: 'Noto Sans JP', sans-serif;
+      --font-body: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+    }
+
+    /* ============================================
+       Reset & Base
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--charcoal);
+      background: var(--snow);
+      line-height: 2.0;
+      font-size: 15px;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--sky);
+      text-decoration: none;
+    }
+
+    /* ============================================
+       Utility
+       ============================================ */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .gradient-text {
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .section-heading {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--grad-horizon);
+      margin-top: 16px;
+      border-radius: 2px;
+    }
+
+    /* ============================================
+       Modal Popup
+       ============================================ */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 11, 22, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+    .modal-overlay.is-open {
+      display: flex;
+    }
+    .modal-box {
+      background: var(--snow);
+      border-radius: 16px;
+      max-width: 440px;
+      width: 100%;
+      padding: 40px 28px 32px;
+      position: relative;
+      box-shadow: 0 24px 80px rgba(11, 11, 22, 0.5);
+      animation: modalIn 0.35s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(24px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: var(--charcoal);
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+    .modal-close:hover { opacity: 1; }
+    .modal-heading {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 18px;
+      color: var(--charcoal);
+      text-align: center;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .modal-sub {
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+    .modal-box .form-group {
+      margin-bottom: 16px;
+    }
+    .modal-box .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+    .modal-box .form-group label .required-badge {
+      display: inline-block;
+      background: var(--coral);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .modal-box .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 16px;
+      font-family: var(--font-body);
+      border: 2px solid #e0e0e8;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .modal-box .form-control:focus {
+      border-color: var(--sky);
+    }
+    .modal-box .form-control::placeholder {
+      color: #aaa;
+    }
+    .modal-submit {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 900;
+      font-family: var(--font-headline);
+      color: #fff;
+      background: var(--grad-cta);
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 8px;
+    }
+    .modal-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(107, 184, 224, 0.4);
+    }
+    .modal-note {
+      font-size: 11px;
+      color: #999;
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+       Fade-in Animation
+       ============================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       Section 1: HERO
+       ============================================ */
+    .hero {
+      background: var(--dark);
+      position: relative;
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+
+    /* Gradient border top */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+
+    /* Gradient glow bottom */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(180deg, transparent 0%, rgba(107,184,224,0.04) 100%);
+      pointer-events: none;
+    }
+
+    .hero .eyebrow {
+      margin-bottom: 28px;
+      font-size: 12px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.7;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+
+    .hero-headline em {
+      font-style: normal;
+      position: relative;
+      display: inline;
+    }
+
+    .hero-headline em::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 40px;
+    }
+
+    .hero-sub strong {
+      color: var(--sky);
+      font-weight: 600;
+    }
+
+    /* CTA Form */
+    .cta-form {
+      max-width: 480px;
+    }
+
+    .cta-input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid rgba(107,184,224,0.25);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.06);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 15px;
+      margin-bottom: 14px;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-input::placeholder {
+      color: rgba(255,255,255,0.35);
+    }
+
+    .cta-input:focus {
+      border-color: var(--sky);
+      box-shadow: 0 0 0 3px rgba(107,184,224,0.15);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 18px 32px;
+      background: var(--grad-cta);
+      color: #fff;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(107,184,224,0.35), 0 0 60px rgba(107,184,224,0.12);
+    }
+
+    .cta-button:hover::before {
+      left: 120%;
+    }
+
+    .trust-badges {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .trust-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.02em;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .trust-badge::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 2px;
+      background: var(--grad-cta);
+    }
+
+    .trust-badge .number {
+      font-family: var(--font-display);
+      font-size: 16px;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       Section 2: PAIN
+       ============================================ */
+    .pain {
+      background: var(--light);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    /* Gradient accent top border */
+    .pain::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .pain-list {
+      list-style: none;
+      margin-bottom: 48px;
+    }
+
+    .pain-item {
+      padding: 20px 0 20px 24px;
+      border-left: 3px solid var(--coral);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 2.0;
+      color: var(--charcoal);
+      position: relative;
+      margin-bottom: 4px;
+      transition: background 0.3s ease, padding-left 0.3s ease;
+    }
+
+    .pain-item:hover {
+      background: rgba(224,112,88,0.04);
+      padding-left: 30px;
+    }
+
+    .pain-closing {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 2.0;
+      color: var(--charcoal);
+      padding: 24px;
+      border-radius: 0;
+      background: var(--snow);
+      border-left: 4px solid var(--charcoal);
+    }
+
+    /* ============================================
+       Section 3: ROOT CAUSE
+       ============================================ */
+    .root-cause {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .root-cause::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-horizon);
+    }
+
+    .root-cause .section-heading {
+      color: #fff;
+    }
+
+    .root-cause .section-heading::after {
+      background: var(--grad-horizon);
+    }
+
+    .cause-block {
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      line-height: 2.2;
+    }
+
+    .cause-block:first-of-type {
+      border-top: none;
+    }
+
+    .cause-block strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .cause-accent {
+      color: var(--sky);
+      font-weight: 600;
+    }
+
+    .highlight-box {
+      margin-top: 48px;
+      padding: 28px 32px;
+      border-left: 4px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      background: rgba(107,184,224,0.06);
+      border-radius: 0;
+    }
+
+    .highlight-box p {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 2.0;
+      color: #fff;
+    }
+
+    .highlight-box em {
+      font-style: normal;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       Section 4: SOLUTION
+       ============================================ */
+    .solution {
+      background: var(--light);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .solution::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .solution-definition {
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 2.0;
+      padding: 20px 24px;
+      background: var(--snow);
+      border-left: 4px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      margin-bottom: 56px;
+      color: var(--charcoal);
+    }
+
+    .solution-definition strong {
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    /* 3 Freedoms — staggered layout */
+    .freedoms {
+      margin-bottom: 56px;
+    }
+
+    .freedom-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(45,45,58,0.08);
+    }
+
+    .freedom-item:last-child {
+      border-bottom: none;
+    }
+
+    .freedom-number {
+      font-family: var(--font-display);
+      font-size: 42px;
+      line-height: 1;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .freedom-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 17px;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .freedom-desc {
+      font-size: 14px;
+      color: rgba(45,45,58,0.7);
+      line-height: 2.0;
+    }
+
+    /* Offset every other freedom for staggered feel */
+    .freedom-item:nth-child(even) {
+      margin-left: 32px;
+    }
+
+    /* Before/After Table */
+    .comparison-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 0;
+      font-size: 14px;
+    }
+
+    .comparison-table thead th {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 2px solid var(--charcoal);
+    }
+
+    .comparison-table thead th:first-child {
+      color: var(--coral);
+    }
+
+    .comparison-table thead th:last-child {
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .comparison-table tbody td {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(45,45,58,0.06);
+      line-height: 1.8;
+      vertical-align: top;
+      transition: border-left 0.4s ease, padding-left 0.4s ease;
+    }
+
+    .comparison-table tbody tr {
+      transition: background 0.3s ease;
+    }
+
+    .comparison-table tbody tr:hover {
+      background: var(--snow);
+    }
+
+    .comparison-table tbody tr:hover td:last-child {
+      border-left: 3px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      padding-left: 17px;
+    }
+
+    .comparison-table tbody td:first-child {
+      color: rgba(45,45,58,0.55);
+    }
+
+    .comparison-table tbody td:last-child {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    /* ============================================
+       Section 5: WEBINAR CONTENT
+       ============================================ */
+    .webinar-content {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .webinar-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-horizon);
+    }
+
+    .webinar-content .section-heading {
+      color: #fff;
+    }
+
+    /* Ladder layout — alternating left/right */
+    .secret-ladder {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .secret-item {
+      position: relative;
+      padding: 32px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 0;
+      transition: background 0.3s ease;
+    }
+
+    .secret-item:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* Stagger left/right */
+    .secret-item:nth-child(1) {
+      margin-right: 10%;
+      border-left: 3px solid transparent;
+      border-image: var(--grad-funnel) 1;
+    }
+
+    .secret-item:nth-child(2) {
+      margin-left: 10%;
+      border-right: 3px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      text-align: right;
+    }
+
+    .secret-item:nth-child(2) .secret-points {
+      text-align: left;
+      margin-left: auto;
+      max-width: 90%;
+    }
+
+    .secret-item:nth-child(3) {
+      margin-right: 5%;
+      margin-left: 5%;
+      border-bottom: 3px solid transparent;
+      border-image: var(--grad-horizon) 1;
+    }
+
+    .secret-number {
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .secret-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .secret-points {
+      list-style: none;
+    }
+
+    .secret-points li {
+      font-size: 14px;
+      line-height: 2.0;
+      color: rgba(255,255,255,0.65);
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .secret-points li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 2px;
+      background: var(--sky);
+      border-radius: 2px;
+    }
+
+    /* Second secret right-aligned bullets fix */
+    .secret-item:nth-child(2) .secret-points li {
+      padding-left: 16px;
+      padding-right: 0;
+    }
+
+    .webinar-cta-area {
+      text-align: center;
+      padding-top: 16px;
+    }
+
+    .webinar-cta-area .cta-button {
+      max-width: 400px;
+    }
+
+    /* ============================================
+       Section 6: SOCIAL PROOF
+       ============================================ */
+    .social-proof {
+      background: var(--light);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .social-proof::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    /* Part A: Stats bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 56px;
+      padding: 32px;
+      background: var(--snow);
+      border-radius: 0;
+      border-top: 3px solid transparent;
+      border-image: var(--grad-horizon) 1;
+      position: relative;
+    }
+
+    .stats-bar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 32px;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      line-height: 1.3;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: rgba(45,45,58,0.55);
+      letter-spacing: 0.02em;
+      margin-top: 4px;
+    }
+
+    /* Part B: Featured stories — alternating layout */
+    .featured-stories {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .featured-card {
+      background: var(--snow);
+      padding: 28px 24px;
+      transition: border-color 0.4s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .featured-card:hover {
+      border-image: var(--grad-funnel) 1;
+    }
+
+    .featured-card:nth-child(even) {
+      border-left: none;
+      border-right: 3px solid transparent;
+    }
+
+    .featured-card:nth-child(even):hover {
+      border-image: var(--grad-funnel) 1;
+    }
+
+    .featured-card:nth-child(even) .featured-card-header {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+    .featured-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .featured-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .featured-meta .featured-name {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--charcoal);
+    }
+
+    .featured-meta .featured-role {
+      font-size: 12px;
+      color: rgba(45,45,58,0.5);
+    }
+
+    .featured-headline-number {
+      font-family: var(--font-display);
+      font-size: 36px;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .featured-ba {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .featured-ba .pain {
+      color: var(--coral);
+    }
+
+    .featured-ba .result {
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    .featured-quote {
+      font-size: 13px;
+      font-style: italic;
+      color: rgba(45,45,58,0.6);
+      padding-left: 16px;
+      border-left: 2px solid rgba(107,184,224,0.3);
+      margin-bottom: 16px;
+      line-height: 1.9;
+    }
+
+    .featured-card:nth-child(even) .featured-quote {
+      padding-left: 0;
+      padding-right: 16px;
+      border-left: none;
+      border-right: 2px solid rgba(107,184,224,0.3);
+      text-align: right;
+    }
+
+    .featured-screenshot {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+      border: 1px solid rgba(45,45,58,0.06);
+    }
+
+    /* Part C: Testimonial Screenshot Gallery */
+    .gallery-section {
+      margin-bottom: 56px;
+    }
+
+    .gallery-caption {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 14px;
+      color: rgba(45,45,58,0.55);
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .screenshot-gallery {
+      columns: 2;
+      column-gap: 12px;
+    }
+
+    .screenshot-gallery img {
+      width: 100%;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(45,45,58,0.06);
+      break-inside: avoid;
+    }
+
+    /* Part D: More Success Numbers — compact grid */
+    .more-success {
+      margin-bottom: 48px;
+    }
+
+    .more-success-heading {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 14px;
+      color: rgba(45,45,58,0.55);
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .compact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--snow);
+      border: 1px solid rgba(45,45,58,0.04);
+      transition: border-color 0.3s ease;
+    }
+
+    .compact-card:hover {
+      border-color: rgba(107,184,224,0.3);
+    }
+
+    .compact-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .compact-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .compact-info .compact-name {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--charcoal);
+    }
+
+    .compact-info .compact-role {
+      font-size: 11px;
+      color: rgba(45,45,58,0.45);
+    }
+
+    .compact-result {
+      font-size: 13px;
+      color: var(--charcoal);
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+    .compact-number {
+      font-family: var(--font-display);
+      font-size: 20px;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Part E: Industry list */
+    .industry-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .industry-tag {
+      font-size: 12px;
+      padding: 6px 14px;
+      background: var(--snow);
+      color: rgba(45,45,58,0.6);
+      border-radius: 2px;
+      border: 1px solid rgba(45,45,58,0.06);
+      font-family: var(--font-body);
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .industry-tag:hover {
+      border-color: var(--sky);
+      color: var(--sky);
+    }
+
+    /* ============================================
+       Section 7: SPEAKER
+       ============================================ */
+    .speaker {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .speaker::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad-horizon);
+    }
+
+    .speaker .section-heading {
+      color: #fff;
+    }
+
+    .speaker-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .speaker-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, rgba(107,184,224,0.12), rgba(155,123,184,0.12));
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 48px;
+      color: rgba(255,255,255,0.15);
+      border-bottom: 3px solid transparent;
+      border-image: var(--grad-horizon) 1;
+    }
+
+    .speaker-name {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .speaker-name-en {
+      font-family: var(--font-display);
+      font-size: 14px;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .speaker-bio {
+      list-style: none;
+    }
+
+    .speaker-bio li {
+      font-size: 14px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.65);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .speaker-bio li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 8px;
+      height: 2px;
+      background: var(--grad-horizon);
+      border-radius: 2px;
+    }
+
+    .speaker-bio li:last-child {
+      border-bottom: none;
+    }
+
+    /* ============================================
+       Section 8: FINAL CTA
+       ============================================ */
+    .final-cta {
+      background: var(--dark);
+      position: relative;
+      padding: 80px 0 100px;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(107,184,224,0.04) 0%, rgba(155,123,184,0.06) 50%, rgba(138,106,175,0.04) 100%);
+      pointer-events: none;
+    }
+
+    .final-cta::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .final-cta .section-heading {
+      color: #fff;
+      text-align: center;
+    }
+
+    .final-cta .section-heading::after {
+      margin: 16px auto 0;
+    }
+
+    .final-cta-copy {
+      font-size: 15px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .final-cta .cta-form {
+      margin: 0 auto;
+    }
+
+    /* ============================================
+       Section 9: FOOTER
+       ============================================ */
+    .footer {
+      background: var(--dark);
+      padding: 32px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--grad-horizon);
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+
+    .footer-inner {
+      text-align: center;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 8px;
+      font-family: var(--font-body);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--sky);
+    }
+
+    /* ============================================
+       Mobile Sticky CTA
+       ============================================ */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--dark);
+      padding: 12px 20px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      border-top: 2px solid transparent;
+      border-image: var(--grad-horizon) 1;
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+    }
+
+    .sticky-cta.is-visible {
+      transform: translateY(0);
+    }
+
+    .sticky-cta .cta-button {
+      width: 100%;
+      padding: 14px 24px;
+      font-size: 14px;
+      border-radius: 14px;
+    }
+
+    /* ============================================
+       Desktop / Tablet
+       ============================================ */
+    @media (min-width: 769px) {
+      body {
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 140px 0 100px;
+      }
+
+      .hero-headline {
+        font-size: 36px;
+      }
+
+      .section-heading {
+        font-size: 28px;
+      }
+
+      .stats-bar {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .stat-number {
+        font-size: 40px;
+      }
+
+      .speaker-grid {
+        grid-template-columns: 280px 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      .freedom-item:nth-child(even) {
+        margin-left: 64px;
+      }
+
+      .secret-item:nth-child(1) {
+        margin-right: 15%;
+      }
+
+      .secret-item:nth-child(2) {
+        margin-left: 15%;
+      }
+
+      .featured-headline-number {
+        font-size: 44px;
+      }
+
+      .screenshot-gallery {
+        column-gap: 16px;
+      }
+
+      .compact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .sticky-cta {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-headline {
+        font-size: 42px;
+      }
+
+      .section-heading {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       Section 1: HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="fade-in">
+        <span class="eyebrow">売れ続けるシナリオ&reg; 無料オンライン講座</span>
+        <h1 class="hero-headline">
+          あなたの実力は十分です。<br>
+          足りないのは<em>「売れ続けるシナリオ」</em>だけ。
+        </h1>
+        <p class="hero-sub">
+          SNS集客に人生を捧げなくても、<br>
+          <strong>ファネルが24時間365日</strong>あなたの代わりに<br>
+          集客・教育・販売を行い、<br>
+          月商8桁を達成する方法を公開します。
+        </p>
+        <button type="button" class="cta-button open-modal">無料で講座を受け取る &rarr;</button>
+        <div class="trust-badges">
+          <span class="trust-badge">顧問先 <span class="number">43</span> 社以上</span>
+          <span class="trust-badge"><span class="number">350</span> 社Over導入</span>
+          <span class="trust-badge">累計 <span class="number">25</span> 億Over</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 2: PAIN
+       ============================================ -->
+  <section class="pain" id="pain">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">こんな状況から、<br>抜け出せずにいませんか？</h2>
+      </div>
+      <ul class="pain-list">
+        <li class="pain-item fade-in">SNSを毎日投稿し続けないと売上が止まる</li>
+        <li class="pain-item fade-in">年収2,000〜4,000万で、なぜか天井が破れない</li>
+        <li class="pain-item fade-in">売上と稼働時間が比例して、頑張るほど忙しくなる</li>
+        <li class="pain-item fade-in">紹介やSNS依存で、来月の売上がまったく読めない</li>
+        <li class="pain-item fade-in">広告に挑戦したが大赤字で、トラウマになっている</li>
+        <li class="pain-item fade-in">他社コンサルに通っても「もっと頑張れ」としか言われない</li>
+      </ul>
+      <div class="pain-closing fade-in">
+        「実力はある。スキルも足りている。なのに、なぜ成果が頭打ちなのか——」
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 3: ROOT CAUSE
+       ============================================ -->
+  <section class="root-cause" id="root-cause">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">うまくいかない原因は、<br>あなたの実力ではありません。</h2>
+      </div>
+      <div class="cause-block fade-in">
+        <strong>多くの専門家が陥る構造的問題</strong>——それは<span class="cause-accent">「自分が動く＝売上」</span>というモデルから抜け出せないこと。
+      </div>
+      <div class="cause-block fade-in">
+        SNS、セミナー、紹介営業...どれも共通しているのは、<strong>「あなたが止まると売上も止まる」</strong>という構造です。
+      </div>
+      <div class="cause-block fade-in">
+        スキルを磨くフェーズはとっくに終わっている。でも<span class="cause-accent">売上の構造</span>だけが、いつまでも変わらない。
+      </div>
+      <div class="highlight-box fade-in">
+        <p>足りないのは<em>「実力をスケールさせる仕組み」</em>——<br>たった1つの<em>「売れ続けるシナリオ」</em>だけ。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 4: SOLUTION
+       ============================================ -->
+  <section class="solution" id="solution">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">その答えが<br>「8桁ファネルホルダー&reg;️」です。</h2>
+      </div>
+      <div class="solution-definition fade-in">
+        自分の代わりに働く仕組みを設計し、数字で経営し、<strong>時間と予測の自由を手に入れた事業家</strong>——それが8桁ファネルホルダーです。
+      </div>
+
+      <!-- 3 Freedoms -->
+      <div class="freedoms">
+        <div class="freedom-item fade-in">
+          <span class="freedom-number">01</span>
+          <div>
+            <div class="freedom-title">時間の自由</div>
+            <div class="freedom-desc">ファネルが動いている間、自分は別のことができる。稼働時間と売上が切り離される。</div>
+          </div>
+        </div>
+        <div class="freedom-item fade-in">
+          <span class="freedom-number">02</span>
+          <div>
+            <div class="freedom-title">予測の自由</div>
+            <div class="freedom-desc">来月の売上が計算で分かる。CPAとROASで経営判断ができる。</div>
+          </div>
+        </div>
+        <div class="freedom-item fade-in">
+          <span class="freedom-number">03</span>
+          <div>
+            <div class="freedom-title">選択の自由</div>
+            <div class="freedom-desc">ROI思考で迷わず判断。感覚ではなく数字で意思決定できる。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before/After Table -->
+      <div class="comparison-table-wrap fade-in">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>古い世界</th>
+              <th>新しい世界</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SNSを毎日投稿し続ける</td>
+              <td>ファネルが24時間365日代わりに働く</td>
+            </tr>
+            <tr>
+              <td>来月の収入が読めない</td>
+              <td>CPAとROASで来月の売上を計算できる</td>
+            </tr>
+            <tr>
+              <td>もっと頑張るしか選択肢がない</td>
+              <td>広告予算を上げるだけでスケール</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 5: WEBINAR CONTENT
+       ============================================ -->
+  <section class="webinar-content" id="webinar">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">この無料オンライン講座で、<br>あなたが手に入れるもの</h2>
+      </div>
+
+      <div class="secret-ladder">
+        <!-- Secret 1 — left aligned -->
+        <div class="secret-item fade-in">
+          <span class="secret-number">Secret #1</span>
+          <h3 class="secret-title">実力を「8桁オファー」に変換する方法</h3>
+          <ul class="secret-points">
+            <li>客数を増やさず、単価を上げて売上を2〜3倍に</li>
+            <li>11業種すべてで成立した再現性</li>
+          </ul>
+        </div>
+
+        <!-- Secret 2 — right aligned -->
+        <div class="secret-item fade-in">
+          <span class="secret-number">Secret #2</span>
+          <h3 class="secret-title">売れ続ける「シナリオ」を<br>あなたのビジネスに設計する方法</h3>
+          <ul class="secret-points">
+            <li>24時間365日、自動で見込み客を集め、教育し、販売する仕組み</li>
+            <li>同じLPで何年も成果を出し続ける構造</li>
+          </ul>
+        </div>
+
+        <!-- Secret 3 — center -->
+        <div class="secret-item fade-in">
+          <span class="secret-number">Secret #3</span>
+          <h3 class="secret-title">自分にしかできないことに全集中する方法</h3>
+          <ul class="secret-points">
+            <li>売り方に悩む時間をゼロにする</li>
+            <li>AI時代に人間が持つべき本当の競争優位</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="webinar-cta-area fade-in">
+        <button type="button" class="cta-button open-modal" style="display:inline-flex;">無料で講座を受け取る &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 6: SOCIAL PROOF
+       ============================================ -->
+  <section class="social-proof" id="proof">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">業種を問わず、<br>成果が出ています。</h2>
+      </div>
+
+      <!-- Part A: Stats Bar -->
+      <div class="stats-bar fade-in">
+        <div class="stat-item">
+          <span class="stat-number">93%</span>
+          <span class="stat-label">最高月商更新率</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5,421<small style="font-size:16px;">万</small></span>
+          <span class="stat-label">平均売上UP</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">25<small style="font-size:16px;">億</small></span>
+          <span class="stat-label">累計売上UP</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">3.1<small style="font-size:16px;">倍</small></span>
+          <span class="stat-label">平均売上</span>
+        </div>
+      </div>
+
+      <!-- Part B: Featured Stories (4 detailed cards, alternating layout) -->
+      <div class="featured-stories">
+
+        <!-- 1. ともかさん -->
+        <article class="featured-card fade-in">
+          <div class="featured-card-header">
+            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
+            <div class="featured-meta">
+              <div class="featured-name">ともかさん</div>
+              <div class="featured-role">心理技術コーチ</div>
+            </div>
+          </div>
+          <span class="featured-headline-number">7,300万</span>
+          <p class="featured-ba">
+            <span class="pain">年収2,000万円で6年間壁。「やれること全部やり尽くした」</span><br>
+            → こだわりを捨てずに1年で累計<span class="result">7,300万円</span>。単価10倍（66万→550万）。稼働1/10。
+          </p>
+          <p class="featured-quote">「10年前の自分には本当にどう考えていいかわかんないレベル」</p>
+          <img class="featured-screenshot" src="images/testimonials/tomoka.jpg" alt="ともかさんの成果報告" loading="lazy">
+        </article>
+
+        <!-- 2. 俊介さん -->
+        <article class="featured-card fade-in">
+          <div class="featured-card-header">
+            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
+            <div class="featured-meta">
+              <div class="featured-name">俊介さん</div>
+              <div class="featured-role">マインドコーチ / パリコレアーティスト</div>
+            </div>
+          </div>
+          <span class="featured-headline-number">月商8桁 x 3ヶ月連続</span>
+          <p class="featured-ba">
+            <span class="pain">紹介のみで年収2,000〜3,000万。口座残高3,000円の経験</span><br>
+            → <span class="result">3ヶ月連続月商8桁</span>。年収5,000〜6,000万UP。パリコレ出演。Zepp東京1,000人。
+          </p>
+          <p class="featured-quote">「布団の中で見て、ガチのこと言ってると思って起き上がった」</p>
+          <img class="featured-screenshot" src="images/testimonials/shunsuke.jpg" alt="俊介さんの成果報告" loading="lazy">
+        </article>
+
+        <!-- 3. みゆさん -->
+        <article class="featured-card fade-in">
+          <div class="featured-card-header">
+            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
+            <div class="featured-meta">
+              <div class="featured-name">みゆさん</div>
+              <div class="featured-role">女性起業家コンサル / 自動化の専門家</div>
+            </div>
+          </div>
+          <span class="featured-headline-number">月商1,680万</span>
+          <p class="featured-ba">
+            <span class="pain">インスタ集客で年収4,000万。SNS毎日投稿で家庭崩壊の危機</span><br>
+            → セミナーゼロで最高<span class="result">月商1,680万</span>。10ヶ月で8,900万。フリースクール開校。
+          </p>
+          <p class="featured-quote">「売れている人を忙しくさせてしまうやり方を教えていた罪悪感から解放された」</p>
+          <img class="featured-screenshot" src="images/testimonials/miyu1.jpg" alt="みゆさんの成果報告" loading="lazy">
+        </article>
+
+        <!-- 4. 白井さん -->
+        <article class="featured-card fade-in">
+          <div class="featured-card-header">
+            <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
+            <div class="featured-meta">
+              <div class="featured-name">白井さん</div>
+              <div class="featured-role">ダイエットコンサル</div>
+            </div>
+          </div>
+          <span class="featured-headline-number">累計7,000万</span>
+          <p class="featured-ba">
+            <span class="pain">年収3,000〜4,000万。広告外注で100万以上失敗のトラウマ</span><br>
+            → <span class="result">累計7,000万</span>。最高月収1,300万。完全自動化。再婚・結婚式2回。
+          </p>
+          <p class="featured-quote">「私でもできた」</p>
+        </article>
+
+      </div>
+
+      <!-- Part C: Testimonial Screenshot Gallery -->
+      <div class="gallery-section fade-in">
+        <p class="gallery-caption">顧問生からの成果報告</p>
+        <div class="screenshot-gallery">
+          <img src="images/testimonials/tomoka.jpg" alt="ともかさんの成果報告" loading="lazy">
+          <img src="images/testimonials/shunsuke.jpg" alt="俊介さんの成果報告" loading="lazy">
+          <img src="images/testimonials/miyu1.jpg" alt="みゆさんの成果報告 1" loading="lazy">
+          <img src="images/testimonials/miyu2.jpg" alt="みゆさんの成果報告 2" loading="lazy">
+          <img src="images/testimonials/riri.jpg" alt="りりさんの成果報告" loading="lazy">
+          <img src="images/testimonials/yurika.jpg" alt="ゆりかさんの成果報告" loading="lazy">
+          <img src="images/testimonials/azusa.jpg" alt="あずささんの成果報告" loading="lazy">
+          <img src="images/testimonials/nobu.jpg" alt="のぶさんの成果報告" loading="lazy">
+          <img src="images/testimonials/oka.jpg" alt="岡さんの成果報告" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Part D: More Success Numbers (compact grid) -->
+      <div class="more-success fade-in">
+        <p class="more-success-heading">その他の成果事例</p>
+        <div class="compact-grid">
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/KJj03Qtg0kAno1q4jEpYt6mBzpyYq2O5wLPBgDJc.jpg" alt="三浦さん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">三浦さん</div>
+              <div class="compact-role">エアコンクリーニングFC</div>
+              <p class="compact-result">広告費30万でROAS 1,000%。累計1.2億</p>
+            </div>
+            <span class="compact-number">1.2億</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hKu5Wy9M4MrxZ2yiaOSCkjVpqQteSwf6gbfPjPOf.jpg" alt="りおなさん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">りおなさん</div>
+              <div class="compact-role">マネースクール</div>
+              <p class="compact-result">1年間LP変更なしでROAS 500〜700%</p>
+            </div>
+            <span class="compact-number">1,200万</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/FGHeFLLqlht6OXeoxOF7mp0xfvnZlhPh9ALKy7Bf.jpg" alt="澤さん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">澤さん</div>
+              <div class="compact-role">外注化コンサル</div>
+              <p class="compact-result">フレームワークをチームに渡しただけ</p>
+            </div>
+            <span class="compact-number">年商2億</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/k0Cn7Gt9Hi0e7TTTfq6gsj8k7qSwHqhKVYtaHwGO.jpg" alt="あみさん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">あみさん</div>
+              <div class="compact-role">令和の虎 / ビジネスプロデューサー</div>
+              <p class="compact-result">LP2年間無変更で億超え維持</p>
+            </div>
+            <span class="compact-number">億超え</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/WMd6QX4pioWeeCWR330XM2Xqk1ywzpYbjKwj2jIA.jpg" alt="ようこさん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">ようこさん</div>
+              <div class="compact-role">片付けの専門家（出版23冊）</div>
+              <p class="compact-result">SNS25万フォロワーでも収益化できなかった→毎月7桁</p>
+            </div>
+            <span class="compact-number">毎月7桁</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/loUP3SzBktqFGbNGaBFgsCTOgNW92eJ5zd6kOuD3.jpg" alt="今田さん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">今田さん</div>
+              <div class="compact-role">美容サロンコンサル</div>
+              <p class="compact-result">初回ウェビナーだけで1,200万成約。ROAS 500%</p>
+            </div>
+            <span class="compact-number">1,200万</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Part E: Industry Tags -->
+      <div class="industry-list fade-in">
+        <span class="industry-tag">身体整体</span>
+        <span class="industry-tag">心理技術</span>
+        <span class="industry-tag">片付け</span>
+        <span class="industry-tag">ダイエット</span>
+        <span class="industry-tag">マインドコーチ</span>
+        <span class="industry-tag">外注化</span>
+        <span class="industry-tag">マネースクール</span>
+        <span class="industry-tag">女性起業家</span>
+        <span class="industry-tag">エアコンFC</span>
+        <span class="industry-tag">美容サロン</span>
+        <span class="industry-tag">サロンコンサル</span>
+        <span class="industry-tag">デザインスクール</span>
+        <span class="industry-tag">ビジネスプロデュース</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 7: SPEAKER PROFILE
+       ============================================ -->
+  <section class="speaker" id="speaker">
+    <div class="container">
+      <div class="fade-in">
+        <h2 class="section-heading">講師紹介</h2>
+      </div>
+      <div class="speaker-grid fade-in">
+        <div class="speaker-photo"><img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/xpXsWHv2C9uzjwAh8Wxr6n6BQQdbGcthqWFp2YiF.jpg" alt="大賀 聖也" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:0;"></div>
+        <div>
+          <h3 class="speaker-name">大賀 聖也</h3>
+          <span class="speaker-name-en">Seiya Oga</span>
+          <ul class="speaker-bio">
+            <li>ハイチケットファネル&reg;の専門家</li>
+            <li>海外ファネルマーケティングを日本一研究して実践</li>
+            <li>Funnel Hacking Live（海外・4,000名規模）現地参加</li>
+            <li>顧問先43社以上（100億Over企業も多数）</li>
+            <li>ファネル導入350社Over</li>
+            <li>カンボジアに小学校2校建設、現地大臣から表彰</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 8: FINAL CTA
+       ============================================ -->
+  <section class="final-cta" id="final-cta">
+    <div class="container">
+      <div class="final-cta-inner fade-in">
+        <span class="eyebrow">The Last Scenario You'll Ever Need</span>
+        <h2 class="section-heading">あなたに必要なのは、<br>たった1つの<br>「売れ続けるシナリオ」だけ。</h2>
+        <p class="final-cta-copy">
+          スキルを磨くフェーズはとっくに終わっています。<br>
+          今必要なのは、ビジネスの構造を変えること。<br>
+          この無料講座で、その第一歩を踏み出してください。
+        </p>
+        <button type="button" class="cta-button open-modal">無料で講座を受け取る &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section 9: FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copyright">&copy; 2026 <span style="font-family:var(--font-display);">LASTPASS Inc.</span></p>
+        <div class="footer-links">
+          <a href="#">特定商取引法に基づく表記</a>
+          <a href="#">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       Mobile Sticky CTA
+       ============================================ -->
+  <div class="sticky-cta" id="stickyCta">
+    <button type="button" class="cta-button open-modal">無料で講座を受け取る &rarr;</button>
+  </div>
+
+  <!-- ============================================
+       UTAGE Modal Popup
+       ============================================ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="閉じる">&times;</button>
+      <p class="modal-heading">無料オンライン講座に<br>今すぐ登録する</p>
+      <p class="modal-sub">登録後すぐに視聴URLをお届けします</p>
+      <form action="https://utg.strategicfunnelclub.com/r/a8jziSdWkjMH/store" method="post">
+        <div class="form-group">
+          <label for="modal-mail">メールアドレス <span class="required-badge">必須</span></label>
+          <input class="form-control" required id="modal-mail" type="email" name="mail" value="" autocomplete="email" placeholder="example@email.com">
+        </div>
+        <button class="modal-submit" type="submit">登録する &rarr;</button>
+      </form>
+      <p class="modal-note">※ 個人情報は厳重に管理し、第三者への提供は行いません</p>
+    </div>
+  </div>
+
+  <!-- ============================================
+       JavaScript
+       ============================================ -->
+  <script>
+    /* IntersectionObserver — fade-in on scroll */
+    (function() {
+      var els = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        els.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        /* Fallback: show all */
+        els.forEach(function(el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+
+    /* Sticky CTA — appears after scrolling past hero */
+    (function() {
+      var hero = document.getElementById('hero');
+      var sticky = document.getElementById('stickyCta');
+      if (!hero || !sticky) return;
+
+      var stickyObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            sticky.classList.remove('is-visible');
+          } else {
+            sticky.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0 });
+
+      stickyObserver.observe(hero);
+    })();
+
+    /* Modal open/close */
+    (function() {
+      var overlay = document.getElementById('modalOverlay');
+      var closeBtn = document.getElementById('modalClose');
+      if (!overlay) return;
+
+      document.querySelectorAll('.open-modal').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          overlay.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+          var input = overlay.querySelector('input[type="email"]');
+          if (input) setTimeout(function() { input.focus(); }, 350);
+        });
+      });
+
+      closeBtn.addEventListener('click', function() {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+
+      overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+          overlay.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+          overlay.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
