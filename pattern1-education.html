@@ -928,40 +928,28 @@
     }
 
     .featured-card {
-      background: var(--snow);
-      padding: 28px 24px;
-      transition: border-color 0.4s ease;
-      border-left: 3px solid transparent;
-    }
-
-    .featured-card:hover {
-      border-image: var(--grad-funnel) 1;
+      background: #fff;
+      padding: 24px 20px;
+      border-radius: 12px;
+      border-left: 4px solid var(--sky);
+      box-shadow: 0 2px 12px rgba(45,45,58,0.06);
+      overflow: hidden;
     }
 
     .featured-card:nth-child(even) {
-      border-left: none;
-      border-right: 3px solid transparent;
-    }
-
-    .featured-card:nth-child(even):hover {
-      border-image: var(--grad-funnel) 1;
-    }
-
-    .featured-card:nth-child(even) .featured-card-header {
-      flex-direction: row-reverse;
-      text-align: right;
+      border-left: 4px solid var(--purple);
     }
 
     .featured-card-header {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 16px;
+      gap: 14px;
+      margin-bottom: 12px;
     }
 
     .featured-avatar {
-      width: 56px;
-      height: 56px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
@@ -981,19 +969,16 @@
 
     .featured-headline-number {
       font-family: var(--font-display);
-      font-size: 36px;
-      background: var(--grad-funnel);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-size: 28px;
+      color: var(--sky);
       display: block;
       line-height: 1.3;
       margin-bottom: 8px;
     }
 
     .featured-ba {
-      font-size: 14px;
-      line-height: 1.9;
+      font-size: 13px;
+      line-height: 2.0;
       color: var(--charcoal);
       margin-bottom: 8px;
     }
@@ -1003,10 +988,7 @@
     }
 
     .featured-ba .result {
-      background: var(--grad-cta);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--sky);
       font-weight: 700;
     }
 
@@ -1014,18 +996,9 @@
       font-size: 13px;
       font-style: italic;
       color: rgba(45,45,58,0.6);
-      padding-left: 16px;
+      padding-left: 14px;
       border-left: 2px solid rgba(107,184,224,0.3);
-      margin-bottom: 16px;
       line-height: 1.9;
-    }
-
-    .featured-card:nth-child(even) .featured-quote {
-      padding-left: 0;
-      padding-right: 16px;
-      border-left: none;
-      border-right: 2px solid rgba(107,184,224,0.3);
-      text-align: right;
     }
 
     /* Part D: More Success Numbers — compact grid */
@@ -1650,7 +1623,7 @@
       <div class="featured-stories">
 
         <!-- 1. ともかさん -->
-        <article class="featured-card fade-in">
+        <article class="featured-card">
           <div class="featured-card-header">
             <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
             <div class="featured-meta">
@@ -1667,7 +1640,7 @@
         </article>
 
         <!-- 2. 俊介さん -->
-        <article class="featured-card fade-in">
+        <article class="featured-card">
           <div class="featured-card-header">
             <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
             <div class="featured-meta">
@@ -1684,7 +1657,7 @@
         </article>
 
         <!-- 3. みゆさん -->
-        <article class="featured-card fade-in">
+        <article class="featured-card">
           <div class="featured-card-header">
             <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
             <div class="featured-meta">
@@ -1701,7 +1674,7 @@
         </article>
 
         <!-- 4. 白井さん -->
-        <article class="featured-card fade-in">
+        <article class="featured-card">
           <div class="featured-card-header">
             <img class="featured-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
             <div class="featured-meta">
@@ -1720,7 +1693,7 @@
       </div>
 
       <!-- Part D: More Success Numbers (compact grid) -->
-      <div class="more-success fade-in">
+      <div class="more-success">
         <p class="more-success-heading">その他の成果事例</p>
         <div class="compact-grid">
 
