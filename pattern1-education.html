@@ -1400,6 +1400,59 @@
         font-size: 32px;
       }
     }
+
+    /* ============================================
+       Commitment Section (1,095日の対話)
+       ============================================ */
+    .commitment {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+    .commitment::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-horizon);
+    }
+    .commitment-number {
+      font-family: var(--font-display);
+      font-size: 48px;
+      color: var(--sky);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .commitment-unit {
+      font-size: 14px;
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 40px;
+      letter-spacing: 0.05em;
+    }
+    .commitment-body {
+      font-size: 14px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.75);
+    }
+    .commitment-body strong {
+      color: #fff;
+    }
+    .commitment-body em {
+      color: var(--sky);
+      font-style: normal;
+      font-weight: 700;
+    }
+    .commitment-closing {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 15px;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      color: #fff;
+      line-height: 2.0;
+    }
   </style>
 </head>
 <body>
@@ -1622,46 +1675,33 @@
 
         <article class="featured-card">
           <div class="fc-header">
-            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
-            <div><div class="fc-name">ともかさん</div><div class="fc-role">心理技術コーチ</div></div>
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/BlRHoBFPxDbZLvtOEw0L3oUUCfktvdrUgvawdlHV.jpg" alt="成瀬さん" loading="lazy">
+            <div><div class="fc-name">成瀬さん</div><div class="fc-role">登録者9万人 YouTuber</div></div>
           </div>
-          <div class="fc-number">7,300万</div>
-          <p class="fc-before">年収2,000万円で6年間壁。「やれること全部やり尽くした」</p>
-          <p class="fc-after">こだわりを捨てずに1年で累計<strong>7,300万円</strong>。単価10倍（66万→550万）。稼働1/10。</p>
-          <p class="fc-quote">「10年前の自分には本当にどう考えていいかわかんないレベル」</p>
+          <div class="fc-number">81日で年商が月商に</div>
+          <p class="fc-before">単価が低く、労働集約型のビジネスに限界を感じていた</p>
+          <p class="fc-after">単価10倍。わずか<strong>81日で年商が月商に</strong>変わった</p>
         </article>
 
         <article class="featured-card">
           <div class="fc-header">
-            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
-            <div><div class="fc-name">俊介さん</div><div class="fc-role">マインドコーチ / パリコレアーティスト</div></div>
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/lf2OptlDXYBTpjT5m7QN1YtCVsMQ0gbnesMCXN3u.jpg" alt="ツッチーさん" loading="lazy">
+            <div><div class="fc-name">ツッチーさん</div><div class="fc-role">フォロワー20万人 インフルエンサー</div></div>
           </div>
-          <div class="fc-number">3ヶ月連続 月商8桁</div>
-          <p class="fc-before">紹介のみで年収2,000〜3,000万。口座残高3,000円の経験</p>
-          <p class="fc-after"><strong>3ヶ月連続月商8桁</strong>。年収5,000〜6,000万UP。パリコレ出演。Zepp東京1,000人。</p>
-          <p class="fc-quote">「布団の中で見て、ガチのこと言ってると思って起き上がった」</p>
+          <div class="fc-number">SNS × 広告 両立</div>
+          <p class="fc-before">SNS集客だけでは頭打ちに。でも広告は未知の世界</p>
+          <p class="fc-after"><strong>SNS集客と広告集客を両立</strong>。いま本当にやりたいことができるようになった</p>
+          <p class="fc-quote">「いま本当にやりたいことができるようになった」</p>
         </article>
 
         <article class="featured-card">
           <div class="fc-header">
-            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
-            <div><div class="fc-name">みゆさん</div><div class="fc-role">女性起業家コンサル / 自動化の専門家</div></div>
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/WMd6QX4pioWeeCWR330XM2Xqk1ywzpYbjKwj2jIA.jpg" alt="ようこさん" loading="lazy">
+            <div><div class="fc-name">ようこさん</div><div class="fc-role">片付けの専門家（出版23冊・SNS25万人）</div></div>
           </div>
-          <div class="fc-number">月商1,680万</div>
-          <p class="fc-before">インスタ集客で年収4,000万。SNS毎日投稿で家庭崩壊の危機</p>
-          <p class="fc-after">セミナーゼロで最高<strong>月商1,680万</strong>。10ヶ月で8,900万。フリースクール開校。</p>
-          <p class="fc-quote">「売れている人を忙しくさせてしまうやり方を教えていた罪悪感から解放された」</p>
-        </article>
-
-        <article class="featured-card">
-          <div class="fc-header">
-            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
-            <div><div class="fc-name">白井さん</div><div class="fc-role">ダイエットコンサル</div></div>
-          </div>
-          <div class="fc-number">累計7,000万</div>
-          <p class="fc-before">年収3,000〜4,000万。広告外注で100万以上失敗のトラウマ</p>
-          <p class="fc-after"><strong>累計7,000万</strong>。最高月収1,300万。完全自動化。再婚・結婚式2回。</p>
-          <p class="fc-quote">「私でもできた」</p>
+          <div class="fc-number">毎月7桁安定</div>
+          <p class="fc-before">SNSフォロワー25万人・出版23冊でもマネタイズが未整備だった</p>
+          <p class="fc-after">サブスク<strong>100人弱</strong>獲得。<strong>毎月7桁安定</strong>収入を実現</p>
         </article>
 
       </div>
@@ -1670,6 +1710,46 @@
       <div class="more-success">
         <p class="more-success-heading">その他の成果事例</p>
         <div class="compact-grid">
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">ともかさん</div>
+              <div class="compact-role">心理技術コーチ</div>
+              <p class="compact-result">こだわりを捨てずに年収3倍。6年間の壁→7,300万</p>
+            </div>
+            <span class="compact-number">7,300万</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">俊介さん</div>
+              <div class="compact-role">マインドコーチ</div>
+              <p class="compact-result">口座残高3,000円→3ヶ月連続月商8桁</p>
+            </div>
+            <span class="compact-number">月商8桁</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">みゆさん</div>
+              <div class="compact-role">女性起業家コンサル</div>
+              <p class="compact-result">セミナーゼロで10ヶ月8,900万</p>
+            </div>
+            <span class="compact-number">8,900万</span>
+          </div>
+
+          <div class="compact-card">
+            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/hmi4FqBswKfYIh82NJuNtSw07J2dFAWJ6Uh4aa7A.jpg" alt="白井さん" loading="lazy">
+            <div class="compact-info">
+              <div class="compact-name">白井さん</div>
+              <div class="compact-role">ダイエットコンサル</div>
+              <p class="compact-result">広告100万失敗→累計7,000万。完全自動化</p>
+            </div>
+            <span class="compact-number">7,000万</span>
+          </div>
 
           <div class="compact-card">
             <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/KJj03Qtg0kAno1q4jEpYt6mBzpyYq2O5wLPBgDJc.jpg" alt="三浦さん" loading="lazy">
@@ -1712,21 +1792,11 @@
           </div>
 
           <div class="compact-card">
-            <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/WMd6QX4pioWeeCWR330XM2Xqk1ywzpYbjKwj2jIA.jpg" alt="ようこさん" loading="lazy">
-            <div class="compact-info">
-              <div class="compact-name">ようこさん</div>
-              <div class="compact-role">片付けの専門家（出版23冊）</div>
-              <p class="compact-result">SNS25万フォロワーでも収益化できなかった→毎月7桁</p>
-            </div>
-            <span class="compact-number">毎月7桁</span>
-          </div>
-
-          <div class="compact-card">
             <img class="compact-avatar" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/loUP3SzBktqFGbNGaBFgsCTOgNW92eJ5zd6kOuD3.jpg" alt="今田さん" loading="lazy">
             <div class="compact-info">
               <div class="compact-name">今田さん</div>
               <div class="compact-role">美容サロンコンサル</div>
-              <p class="compact-result">初回ウェビナーだけで1,200万成約。ROAS 500%</p>
+              <p class="compact-result">初回ウェビナーだけで1,200万成約</p>
             </div>
             <span class="compact-number">1,200万</span>
           </div>
@@ -1750,6 +1820,32 @@
         <span class="industry-tag">デザインスクール</span>
         <span class="industry-tag">ビジネスプロデュース</span>
       </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Section: 1,095日の対話 (Commitment)
+       ============================================ -->
+  <section class="commitment">
+    <div class="container">
+      <div class="commitment-number">1,095</div>
+      <p class="commitment-unit">日間、毎朝8:45からZOOMを開き続けた</p>
+
+      <p class="commitment-body">
+        3年間、毎日。朝8:45から顧問生たちと<strong>グループコンサルティング</strong>を続けてきました。<br><br>
+        累計<em>2,000時間以上</em>の対話。顧客のビジネスや人生の相談を、1日も欠かさず。<br><br>
+        どこで転びやすいのか。何をミスりやすいのか。どうやるとうまくいかなくなるのか。<br>
+        そして、<strong>成果に直結するものは何なのか</strong>。<br><br>
+        毎日の対話を積み重ねてきたからこそ、見えるものがあります。<br><br>
+        うまくいかない理由や、年商が頭打ちになる根本原因は<em>「やり方やノウハウ」ではない</em>ということも。<br>
+        だからこそ、僕はここにコミットし続けてきました。
+      </p>
+
+      <p class="commitment-closing">
+        顧問生たちと毎日積み上げてきたすべてが、<br>
+        次のあなたのファネルの初期設計に継承される。<br>
+        だから僕は、明日もZOOMを開き続けます。
+      </p>
     </div>
   </section>
 
