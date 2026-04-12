@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ハイチケットウェビナーファネル構築講座（無料）| 大賀聖也</title>
+  <meta name="description" content="SNSフォロワー29名から累計23億の売上UP支援。海外トップマーケターのファネル戦略を日本向けに体系化した無料講座。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       DESIGN.md §19 — CSS Custom Properties
+       ============================================ */
+    :root {
+      --sky: #6BB8E0;
+      --blue: #7B8EC8;
+      --purple: #9B7BB8;
+      --violet: #8A6AAF;
+      --deep: #5C4D99;
+      --dark: #0B0B16;
+      --dark2: #111120;
+      --dark3: #171728;
+      --surface: #1C1C2E;
+      --charcoal: #2D2D3A;
+      --warm: #7A7A90;
+      --dim: #9999AA;
+      --mist: #E8EAF2;
+      --light: #F5F6FA;
+      --snow: #FAFBFE;
+      --gold: #D4A843;
+      --coral: #E07058;
+      --success: #3CC494;
+
+      --grad-funnel: linear-gradient(180deg, #6BB8E0 0%, #7B8EC8 40%, #9B7BB8 75%, #8A6AAF 100%);
+      --grad-cta: linear-gradient(135deg, #6BB8E0 0%, #7B8EC8 50%, #9B7BB8 100%);
+      --grad-horizon: linear-gradient(90deg, #6BB8E0, #7B8EC8, #9B7BB8, #8A6AAF);
+      --grad-subtle: linear-gradient(135deg, rgba(107,184,224,.08), rgba(123,142,200,.06), rgba(155,123,184,.08));
+
+      --font-display: 'DM Serif Display', serif;
+      --font-headline: 'Noto Sans JP', sans-serif;
+      --font-body: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+    }
+
+    /* ============================================
+       Reset & Base — DESIGN.md §18
+       ============================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--charcoal);
+      background: var(--snow);
+      line-height: 2.0;
+      font-size: 15px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--sky); text-decoration: none; }
+
+    /* ============================================
+       Utility — DESIGN.md §6, §10
+       ============================================ */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    .gradient-text {
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .section-heading {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--grad-horizon);
+      margin-top: 12px;
+      border-radius: 2px;
+    }
+
+    /* ============================================
+       Fade-in Animation — DESIGN.md §9
+       ============================================ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       §1 HERO — Dark (DESIGN.md §4 FRONT tier + §11.1)
+       Background: Dark with animated blobs
+       ============================================ */
+    .hero {
+      background: var(--dark);
+      position: relative;
+      padding: 100px 0 80px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--grad-horizon);
+      z-index: 3;
+    }
+
+    /* Animated blobs — DESIGN.md §9.2 */
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg .g1 {
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      filter: blur(120px); opacity: .18; background: var(--sky);
+      top: -15%; right: -8%; animation: drift 14s ease-in-out infinite;
+    }
+    .hero-bg .g2 {
+      position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      filter: blur(100px); opacity: .12; background: var(--purple);
+      bottom: -10%; left: -5%; animation: drift 18s ease-in-out infinite reverse;
+    }
+    .hero-bg .g3 {
+      position: absolute; width: 280px; height: 280px; border-radius: 50%;
+      filter: blur(90px); opacity: .08; background: var(--blue);
+      top: 35%; left: 40%; animation: drift 16s ease-in-out infinite 3s;
+    }
+    @keyframes drift {
+      0%, 100% { transform: translate(0,0); }
+      50% { transform: translate(25px, -30px); }
+    }
+
+    .hero-inner { position: relative; z-index: 2; }
+
+    .hero .eyebrow { font-size: 11px; margin-bottom: 28px; }
+
+    .hero-headline {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(22px, 5vw, 28px);
+      line-height: 1.7;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      position: relative;
+      display: inline;
+    }
+    .hero-headline em::after {
+      content: '';
+      position: absolute;
+      bottom: 2px; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+      border-radius: 2px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 40px;
+      max-width: 560px;
+    }
+    .hero-sub strong { color: var(--sky); font-weight: 600; }
+
+    /* CTA Button — DESIGN.md §8.3 radius-cta: 14px */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 480px;
+      padding: 18px 32px;
+      background: var(--grad-cta);
+      color: #fff;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transition: left 0.6s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(107,184,224,0.35), 0 0 60px rgba(107,184,224,0.12);
+    }
+    .cta-button:hover::before { left: 120%; }
+
+    .cta-micro {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.02em;
+      position: relative;
+      padding-left: 14px;
+    }
+    .trust-badge::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 6px; height: 6px;
+      border-radius: 2px;
+      background: var(--grad-cta);
+    }
+    .trust-badge .number {
+      font-family: var(--font-display);
+      font-size: 16px;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       §2 PAIN — Light (DESIGN.md §11.6 BG alternation)
+       ============================================ */
+    .pain {
+      background: var(--light);
+      padding: 80px 0;
+      position: relative;
+    }
+    .pain::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .pain-list { list-style: none; margin-bottom: 48px; }
+    .pain-item {
+      padding: 20px 0 20px 24px;
+      border-left: 3px solid var(--coral);
+      font-size: 15px;
+      line-height: 2.0;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+      transition: background 0.3s ease, padding-left 0.3s ease;
+    }
+    .pain-item:hover {
+      background: rgba(224,112,88,0.04);
+      padding-left: 30px;
+    }
+
+    .pain-closing {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 2.0;
+      padding: 24px;
+      background: var(--snow);
+      border-left: 4px solid var(--charcoal);
+    }
+
+    /* ============================================
+       §3 ROOT CAUSE — Dark
+       ============================================ */
+    .root-cause {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+    .root-cause::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+    .root-cause .section-heading { color: #fff; }
+
+    .cause-block {
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      line-height: 2.2;
+    }
+    .cause-block:first-of-type { border-top: none; }
+    .cause-block strong { color: #fff; font-weight: 700; }
+    .cause-accent { color: var(--sky); font-weight: 600; }
+
+    .highlight-box {
+      margin-top: 48px;
+      padding: 28px 32px;
+      border-left: 4px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      background: rgba(107,184,224,0.06);
+    }
+    .highlight-box p {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 2.0;
+      color: #fff;
+    }
+    .highlight-box em {
+      font-style: normal;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       §4 CURRICULUM — Snow (Staggered ladder)
+       ============================================ */
+    .curriculum {
+      background: var(--snow);
+      padding: 80px 0;
+      position: relative;
+    }
+    .curriculum::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .curriculum-ladder {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 48px;
+    }
+
+    .curriculum-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      background: #fff;
+      overflow: hidden;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .curriculum-item:hover {
+      transform: translateX(4px);
+      box-shadow: inset -4px 0 0 0 var(--sky);
+    }
+    .curriculum-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 0;
+      background: var(--grad-funnel);
+      transition: width 0.3s;
+    }
+    .curriculum-item:hover::before { width: 3px; }
+
+    .ci-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: #fff;
+      position: relative;
+    }
+    .curriculum-item:nth-child(1) .ci-number { background: var(--sky); }
+    .curriculum-item:nth-child(2) .ci-number { background: var(--blue); }
+    .curriculum-item:nth-child(3) .ci-number { background: var(--purple); }
+    .curriculum-item:nth-child(4) .ci-number { background: var(--violet); }
+    .curriculum-item:nth-child(5) .ci-number { background: var(--deep); }
+
+    .ci-body { padding: 24px 28px; }
+    .ci-title {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .ci-desc {
+      font-size: 13px;
+      color: var(--warm);
+      line-height: 1.9;
+    }
+
+    /* ============================================
+       §5 PROOF — Dark (Stats + Testimonials)
+       ============================================ */
+    .proof {
+      background: var(--dark);
+      padding: 80px 0;
+      position: relative;
+    }
+    .proof::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+    .proof .section-heading { color: #fff; }
+
+    /* Stats bar */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 48px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 28px 16px;
+      background: var(--dark2);
+      position: relative;
+    }
+    .stat-item:first-child::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 32px;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      line-height: 1.3;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* Testimonials */
+    .testimonial-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .testimonial {
+      padding: 24px 28px;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid transparent;
+      border-image: var(--grad-funnel) 1;
+      transition: background 0.3s;
+    }
+    .testimonial:hover { background: rgba(255,255,255,0.06); }
+    .t-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .t-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .t-name {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+    .t-role { font-size: 12px; color: rgba(255,255,255,0.4); }
+    .t-result {
+      font-family: var(--font-display);
+      font-size: 20px;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    .t-quote {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 2.0;
+      padding-left: 14px;
+      border-left: 2px solid var(--sky);
+    }
+
+    /* ============================================
+       §6 INSTRUCTOR — Light (Editorial split)
+       ============================================ */
+    .instructor {
+      position: relative;
+    }
+    .instructor::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .instructor-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .instructor-left {
+      background: var(--dark);
+      padding: clamp(40px, 5vw, 64px);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .instructor-left::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--grad-funnel);
+    }
+    .instructor-left::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(107,184,224,.08), rgba(123,142,200,.04) 40%, transparent 70%);
+    }
+
+    .il-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--sky);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .il-name {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 32px);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .il-desc {
+      font-size: 14px;
+      line-height: 2.2;
+      color: rgba(255,255,255,0.55);
+    }
+    .il-desc .hl { color: var(--sky); font-weight: 600; }
+
+    .instructor-right {
+      background: var(--light);
+      padding: clamp(40px, 5vw, 64px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .ir-stat {
+      padding: 0 0 16px;
+      border-bottom: 1px solid var(--mist);
+    }
+    .ir-stat:last-child { border-bottom: none; padding-bottom: 0; }
+    .ir-number {
+      font-family: var(--font-display);
+      font-size: 28px;
+      background: var(--grad-funnel);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      line-height: 1.3;
+    }
+    .ir-label {
+      font-size: 12px;
+      color: var(--warm);
+      margin-top: 2px;
+    }
+
+    /* ============================================
+       §7 FAQ — Snow (Accordion style)
+       ============================================ */
+    .faq {
+      background: var(--snow);
+      padding: 80px 0;
+      position: relative;
+    }
+    .faq::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-subtle);
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .faq-item {
+      background: #fff;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .faq-q {
+      padding: 20px 24px;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .faq-q:hover { background: var(--grad-subtle); }
+    .faq-q::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 0;
+      background: var(--grad-funnel);
+      transition: width 0.3s;
+    }
+    .faq-q:hover::before { width: 3px; }
+    .faq-q .arrow {
+      font-size: 18px;
+      color: var(--dim);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+    .faq-a p {
+      font-size: 14px;
+      color: var(--warm);
+      line-height: 2.0;
+    }
+
+    /* ============================================
+       §8 FINAL CTA — Dark (DESIGN.md §11.4)
+       ============================================ */
+    .final-cta {
+      background: var(--dark);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-horizon);
+    }
+    .final-cta::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--grad-horizon);
+    }
+
+    .final-cta .fc-heading {
+      font-family: var(--font-headline);
+      font-weight: 900;
+      font-size: clamp(20px, 4vw, 26px);
+      line-height: 1.7;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .final-cta .fc-sub {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 2.0;
+      margin-bottom: 40px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ============================================
+       FOOTER — DESIGN.md §11 (minimal)
+       ============================================ */
+    .footer {
+      background: var(--dark);
+      padding: 32px 24px;
+      text-align: center;
+      position: relative;
+    }
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+    .footer .f-brand {
+      font-family: var(--font-display);
+      font-size: 14px;
+      background: var(--grad-cta);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer p {
+      font-size: 10px;
+      color: rgba(255,255,255,0.15);
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       Responsive — DESIGN.md §17
+       ============================================ */
+    @media (max-width: 768px) {
+      .instructor-split { grid-template-columns: 1fr; }
+      .stats-bar { grid-template-columns: 1fr; }
+      .curriculum-item { grid-template-columns: 60px 1fr; }
+      .trust-badges { flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================
+       §1 HERO — Dark + Blobs
+       BG: Dark → (next: Light)
+       Gradient touchpoints: ::before, ::after, eyebrow, headline em, CTA button, trust badges
+       ======================================== -->
+  <section class="hero">
+    <div class="hero-bg"><div class="g1"></div><div class="g2"></div><div class="g3"></div></div>
+    <div class="container hero-inner">
+      <div class="eyebrow">Free Online Course</div>
+
+      <h1 class="hero-headline">
+        SNS集客に人生を捧げなくても、<br>
+        <em>ファネルが24時間365日</em><br>
+        あなたの代わりに売り続ける方法
+      </h1>
+
+      <p class="hero-sub">
+        海外トップマーケターが実践する<strong>ウェビナーファネル戦略</strong>を、<br>
+        日本の起業家向けに体系化。<br>
+        全5回の無料動画講座で、仕組みの全体像を手に入れてください。
+      </p>
+
+      <button class="cta-button" onclick="document.getElementById('optin-form').scrollIntoView({behavior:'smooth'})">
+        無料で講座を受け取る
+      </button>
+      <p class="cta-micro">メールアドレスのみ / 30秒で完了 / いつでも解除可能</p>
+
+      <div class="trust-badges">
+        <span class="trust-badge"><span class="number">23</span>億 売上UP支援</span>
+        <span class="trust-badge"><span class="number">330</span>人+ 起業家を支援</span>
+        <span class="trust-badge"><span class="number">40</span>社+ 顧問実績</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §2 PAIN — Light
+       BG: Light → (next: Dark)
+       Coral: pain context only (DESIGN.md §5.3)
+       ======================================== -->
+  <section class="pain fade-in">
+    <div class="container">
+      <div class="eyebrow">The Problem</div>
+      <h2 class="section-heading">こんな状態に、心当たりはありませんか？</h2>
+
+      <ul class="pain-list">
+        <li class="pain-item">売上は上がっている。でも、SNS投稿・セミナー・セールスに追われ続けて時間がない</li>
+        <li class="pain-item">単価30万〜80万のバックエンドを売れるが、利益が手元に残らない</li>
+        <li class="pain-item">集客のために自分が動き続けるモデルから抜け出せない</li>
+        <li class="pain-item">「もっと頑張る」以外の解決策が見えない</li>
+        <li class="pain-item">自分のポテンシャルを活かしきれていない焦燥感がある</li>
+      </ul>
+
+      <div class="pain-closing">
+        もしひとつでも当てはまるなら、あなたは<strong>Winners Hell</strong>にいるかもしれません。<br>
+        売上は上がっているのに、時間も自由もやりがいもない。<br>
+        その原因は「能力不足」ではなく「<strong>構造の欠如</strong>」です。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §3 ROOT CAUSE — Dark
+       BG: Dark → (next: Snow)
+       ======================================== -->
+  <section class="root-cause fade-in">
+    <div class="container">
+      <div class="eyebrow">Root Cause</div>
+      <h2 class="section-heading">なぜ、頑張れば頑張るほど苦しくなるのか</h2>
+
+      <div class="cause-block">
+        <strong>問題の本質は「集客」ではなく「販売構造」にあります。</strong><br>
+        多くの起業家は、SNSのフォロワーを増やすことが売上に直結すると考えています。しかし、<span class="cause-accent">構造がなければ、どれだけ集客しても利益には変わりません。</span>
+      </div>
+
+      <div class="cause-block">
+        Russell Brunsonの公開データによると、ウェビナーファネルのCVRはトップ層で15%。一般的でも5〜10%。<br>
+        つまり、正しい構造さえあれば<span class="cause-accent">少ないリストでも高い成約率</span>が出せるということ。
+      </div>
+
+      <div class="cause-block">
+        <strong>必要なのは「もっと頑張る」ことではなく、「仕組みを変える」こと。</strong><br>
+        広告→ウェビナー→個別面談→成約。この一連の流れを自動化する設計図が「ハイチケットファネル」です。
+      </div>
+
+      <div class="highlight-box">
+        <p>この無料講座では、<em>ハイチケットウェビナーファネル</em>の全体設計を<br>5本の動画で体系的にお伝えします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §4 CURRICULUM — Snow (Value Ladder layout)
+       BG: Snow → (next: Dark)
+       AP-1 avoided: ladder layout, not card grid
+       ======================================== -->
+  <section class="curriculum fade-in">
+    <div class="container">
+      <div class="eyebrow">Curriculum</div>
+      <h2 class="section-heading">全5回の講座で学べること</h2>
+
+      <div class="curriculum-ladder">
+        <div class="curriculum-item">
+          <div class="ci-number">01</div>
+          <div class="ci-body">
+            <div class="ci-title">ハイチケットファネルの全体像</div>
+            <div class="ci-desc">広告→オプトイン→ウェビナー→個別面談→成約。売れ続けるシナリオの設計思想と、なぜこの構造が高単価ビジネスに最適なのか</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="ci-number">02</div>
+          <div class="ci-body">
+            <div class="ci-title">Perfect Webinar — 売れるウェビナーの構成</div>
+            <div class="ci-desc">オープニング → 3つのSecret → The Stack → CTA。Russell Brunsonが体系化した鉄板構成を、日本市場での実践方法とあわせて解説</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="ci-number">03</div>
+          <div class="ci-body">
+            <div class="ci-title">Epiphany Bridge — 信念を変えるストーリー設計</div>
+            <div class="ci-desc">見込み客の「信念」を変え、行動を促すストーリーの作り方。教育コンテンツの中にセールスを自然に組み込む技術</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="ci-number">04</div>
+          <div class="ci-body">
+            <div class="ci-title">Value Ladder — 商品設計と価格戦略</div>
+            <div class="ci-desc">フロントエンド→ミドル→バックエンドの段階設計。顧客が自然に上位商品に進む導線の作り方</div>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="ci-number">05</div>
+          <div class="ci-body">
+            <div class="ci-title">広告×ファネル — 自動集客の仕組み化</div>
+            <div class="ci-desc">Meta広告でウェビナー登録を自動化する設計図。少ない広告費でも成果を出すための「ファネル数学」の考え方</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <button class="cta-button" onclick="document.getElementById('optin-form').scrollIntoView({behavior:'smooth'})">
+          無料で講座を受け取る
+        </button>
+        <p class="cta-micro" style="color:var(--dim);">メールアドレスのみ / 30秒で完了</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §5 PROOF — Dark (Stats + Testimonials)
+       BG: Dark → (next: Split)
+       ======================================== -->
+  <section class="proof fade-in">
+    <div class="container">
+      <div class="eyebrow">Results</div>
+      <h2 class="section-heading">このフレームワークを実践した顧問生の変化</h2>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-number">23億</span>
+          <span class="stat-label">累計売上UP支援額</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">330+</span>
+          <span class="stat-label">支援した起業家数</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">1,000+</span>
+          <span class="stat-label">朝礼グルコン継続日数</span>
+        </div>
+      </div>
+
+      <div class="testimonial-stack">
+        <div class="testimonial">
+          <div class="t-meta">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/K4SySnkLG2z3ooufCFqoycvn7d2Qa4ifTehxO6VI.jpg" alt="俊介さん" class="t-avatar">
+            <div>
+              <div class="t-name">俊介さん</div>
+              <div class="t-role">コーチング（マインド系）</div>
+            </div>
+          </div>
+          <div class="t-result">マインド系初の広告ファネル成功事例 / 月商8桁</div>
+          <div class="t-quote">「非稼ぐ系」でも広告ファネルは機能する。その実証例の第一号になりました。</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="t-meta">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/7uNrEmeTOMnM9ibENAP2N3h4YvhitwdpObKnqzZd.jpg" alt="ともかさん" class="t-avatar">
+            <div>
+              <div class="t-name">ともかさん</div>
+              <div class="t-role">心理技術コーチ</div>
+            </div>
+          </div>
+          <div class="t-result">単価10倍 / 稼働1/10</div>
+          <div class="t-quote">仕組みを変えたことで、稼働時間は10分の1になったのに単価は10倍に。構造の力を実感しています。</div>
+        </div>
+
+        <div class="testimonial">
+          <div class="t-meta">
+            <img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/HyTpm4YjDuh3b03T62ZynxAtLVKoyLRiIMlys332.jpg" alt="みゆさん" class="t-avatar">
+            <div>
+              <div class="t-name">みゆさん</div>
+              <div class="t-role">女性起業家コンサル</div>
+            </div>
+          </div>
+          <div class="t-result">セミナー0回で最高月商 / 自動化で8桁</div>
+          <div class="t-quote">セミナーを一度もやらずに過去最高の月商を達成。ファネルの自動化で実現しました。</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <button class="cta-button" onclick="document.getElementById('optin-form').scrollIntoView({behavior:'smooth'})">
+          無料で講座を受け取る
+        </button>
+        <p class="cta-micro">メールアドレスのみ / いつでも解除可能</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §6 INSTRUCTOR — Split (Dark + Light)
+       BG: Split → (next: Snow)
+       DESIGN.md §11.5 Editorial Split
+       ======================================== -->
+  <section class="instructor fade-in">
+    <div class="instructor-split">
+      <div class="instructor-left">
+        <div class="il-label">Instructor</div>
+        <h3 class="il-name">大賀 聖也</h3>
+        <p class="il-desc">
+          「<span class="hl">ハイチケットファネル</span>」の専門家。<br><br>
+          海外トップマーケター（Russell Brunson, Dan Kennedy, Jay Abraham）のフレームワークを日本市場に最適化し、<span class="hl">330人以上の起業家</span>を支援。<br><br>
+          SNSフォロワーわずか29名の段階から<span class="hl">累計23億の売上UP</span>を支援してきた実績を持つ。<br><br>
+          ツールの使い方ではなく「<span class="hl">戦略と構造</span>」を教えるポジションで、日本市場に唯一無二の専門性を確立。
+        </p>
+      </div>
+      <div class="instructor-right">
+        <div class="ir-stat">
+          <span class="ir-number">29名 → 3億</span>
+          <span class="ir-label">SNSフォロワー数での初回売上実績</span>
+        </div>
+        <div class="ir-stat">
+          <span class="ir-number">40社+</span>
+          <span class="ir-label">顧問先企業数</span>
+        </div>
+        <div class="ir-stat">
+          <span class="ir-number">23億</span>
+          <span class="ir-label">累計売上UP支援額</span>
+        </div>
+        <div class="ir-stat">
+          <span class="ir-number">1,000日+</span>
+          <span class="ir-label">朝礼グルコン継続（平日毎朝8:45〜）</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §7 FAQ — Snow
+       BG: Snow → (next: Dark)
+       ======================================== -->
+  <section class="faq fade-in">
+    <div class="container">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="section-heading">よくある質問</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            本当に無料ですか？
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>はい、全5回の動画講座は完全無料です。メールアドレスの登録のみで、すべての講座をご覧いただけます。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            初心者でも理解できますか？
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>この講座は、すでにビジネスを持っている方（年商1,000万〜数億規模）を対象にしています。ファネルの専門用語は講座内で解説しますが、起業前の方には難しい内容です。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            どのくらいの期間で届きますか？
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>登録直後に第1回の動画が届きます。その後、1日1通のペースで全5回の講座をお届けします。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            後から営業の連絡が来ますか？
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>講座終了後に個別相談のご案内をお送りすることがあります。ただし、煽りや強引な営業は一切行いません。興味がなければスルーしていただいて問題ありません。メールはいつでも解除可能です。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+            どの業種に向いていますか？
+            <span class="arrow">&#9662;</span>
+          </div>
+          <div class="faq-a">
+            <p>コーチング・コンサル・セラピスト・サロン経営・講師業など、高単価サービスを提供している方に最適です。物販やEC事業者向けの内容ではありません。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       §8 FINAL CTA — Dark
+       BG: Dark (bottom)
+       ======================================== -->
+  <section class="final-cta fade-in" id="optin-form">
+    <div class="container">
+      <div class="eyebrow">Start Now</div>
+      <h2 class="fc-heading">
+        「もっと頑張る」を卒業して、<br>
+        <span class="gradient-text">売れ続ける仕組み</span>を手に入れる
+      </h2>
+      <p class="fc-sub">
+        全5回の無料動画講座で、ハイチケットウェビナーファネルの全体設計をお伝えします。<br>
+        メールアドレスを入力して、今すぐ第1回の動画を受け取ってください。
+      </p>
+
+      <form style="max-width:440px; margin:0 auto;" onsubmit="return false;">
+        <input type="email" placeholder="メールアドレスを入力" required
+          style="
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid rgba(107,184,224,0.25);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.06);
+            color: #fff;
+            font-family: var(--font-body);
+            font-size: 15px;
+            margin-bottom: 14px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+          "
+          onfocus="this.style.borderColor='var(--sky)'; this.style.boxShadow='0 0 0 3px rgba(107,184,224,0.15)'"
+          onblur="this.style.borderColor='rgba(107,184,224,0.25)'; this.style.boxShadow='none'"
+        >
+        <button class="cta-button" type="submit" style="width:100%;">
+          無料で講座を受け取る
+        </button>
+      </form>
+      <p class="cta-micro" style="text-align:center; margin-top:14px;">
+        登録は30秒で完了 / いつでもワンクリックで解除可能
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="f-brand">Funnel Holder®</div>
+    <p>&copy; LASTPASS Inc. All rights reserved.</p>
+  </footer>
+
+  <!-- ========================================
+       Scroll Animation
+       ======================================== -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
