@@ -37,7 +37,7 @@
     .fade-in.is-visible{opacity:1;transform:translateY(0)}
 
     /* ===== TOP BAR ===== */
-    .top-bar{background:var(--dark2);padding:10px 24px;text-align:center;position:relative}
+    .top-bar{background:var(--dark2);padding:10px 16px;text-align:center;position:relative}
     .top-bar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad-horizon)}
     .top-bar p{font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.02em;line-height:1.6}
     .top-bar strong{color:#fff;font-weight:700}
@@ -195,6 +195,17 @@
       .ps-item{padding:16px 6px}
       .benefit-grid{grid-template-columns:1fr}
       .curriculum-item{grid-template-columns:60px 1fr}
+      .top-bar p{font-size:12px}
+      .hero{padding:60px 0 56px}
+      .hero-headline{font-size:21px!important;line-height:1.6!important}
+      .hero-sub{font-size:14px!important;line-height:1.9!important}
+      .section-heading{font-size:20px!important;line-height:1.55!important}
+      .cta-button{font-size:16px!important;padding:16px 24px!important}
+      .cta-micro{font-size:12px!important}
+      .fc-heading{font-size:20px!important;line-height:1.6!important}
+      .fc-sub{font-size:13px!important}
+      .modal-heading{font-size:17px!important}
+      .modal-submit{font-size:15px!important}
     }
   </style>
 </head>
@@ -202,7 +213,7 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    <p>これは実話です：SNS投稿・セミナーなしで<strong class="tb-accent">33ヶ月連続で月商8桁</strong>を安定化させた<strong>仕組みの設計図</strong></p>
+    <p>SNS投稿・セミナーなしで<strong class="tb-accent">33ヶ月連続月商8桁</strong>を安定化させた<strong>仕組みの設計図</strong></p>
   </div>
 
   <!-- HERO -->
@@ -212,12 +223,13 @@
       <div class="eyebrow">Free Online Course</div>
       <h1 class="hero-headline">
         SNSに人生を捧げなくても<br>
-        <em>超高単価を24時間365日販売する</em><br>
-        売れ続けるシナリオ設計の全手順
+        <em>超高単価を24時間販売する</em><br>
+        売れ続けるシナリオの全手順
       </h1>
       <p class="hero-sub">
-        いまよりも<strong>3倍〜10倍値上げ</strong>しても「いますぐやります」といわれて、<br>
-        大好きなお客さんに囲まれる<strong>秘密の集客戦略</strong>を無料公開します。
+        いまより<strong>3倍〜10倍値上げ</strong>しても<br>
+        「いますぐやります」といわれて<br>
+        大好きなお客さんに囲まれる<strong>秘密の集客</strong>
       </p>
       <button class="cta-button" onclick="openModal()">
         月商8桁安定の仕組みを学ぶ
@@ -245,7 +257,7 @@
   <section class="pain fade-in">
     <div class="container">
       <div class="eyebrow">The Problem</div>
-      <h2 class="section-heading">実力はある。スキルも足りている。<br>なのに、なぜ天井が破れないのか。</h2>
+      <h2 class="section-heading">実力はある。スキルも足りている。<br>なのに、なぜ天井が破れない？</h2>
       <ul class="pain-list">
         <li class="pain-item">毎朝SNSに2時間。投稿をサボった月は売上が落ちる。あなたが止まると、ビジネスも止まる</li>
         <li class="pain-item">年収2,000万〜4,000万の壁を「もっと頑張る」以外の方法で突破できない</li>
@@ -265,7 +277,7 @@
   <section class="root-cause fade-in">
     <div class="container">
       <div class="eyebrow">Root Cause</div>
-      <h2 class="section-heading">売上は「頑張り量」では決まらない。<br>「仕組みの設計」で決まる。</h2>
+      <h2 class="section-heading">売上は「頑張り量」じゃない。<br>「仕組みの設計」で決まる。</h2>
       <div class="cause-block">
         <strong>フォロワーを増やせば売上が上がる。——これは幻想です。</strong><br>
         僕自身、<span class="cause-accent">SNSフォロワーわずか29名の段階で累計3億の売上</span>を作りました。さらに言えば、僕の顧問先で月商8桁を達成した11名のうち、SNS集客で成果を出していたのは1名もいません。全員「仕組み」で突破しています。
@@ -337,7 +349,7 @@
   <section class="benefits fade-in">
     <div class="container">
       <div class="eyebrow">Transformation</div>
-      <h2 class="section-heading">売れ続けるシナリオを手に入れた先に、<br>あなたを待っている「3つの自由」</h2>
+      <h2 class="section-heading">シナリオを手に入れた先の<br>「3つの自由」</h2>
       <div class="benefit-grid">
         <div class="benefit-card">
           <div class="bc-icon">&#9200;</div>
@@ -381,7 +393,7 @@
   <section class="testimonials fade-in">
     <div class="container">
       <div class="eyebrow">Results</div>
-      <h2 class="section-heading">「実力はあるのに仕組みがなかった」<br>専門家たちの、その後。</h2>
+      <h2 class="section-heading">仕組みがなかった専門家たちの<br>その後。</h2>
       <div class="testimonial-stack">
         <div class="testimonial">
           <div class="t-meta">
@@ -444,12 +456,12 @@
     <div class="container">
       <div class="eyebrow">Start Now</div>
       <h2 class="fc-heading">
-        スキルを磨くフェーズは、もう終わった。<br>
-        次は<span class="gradient-text">売れ続けるシナリオ&reg;</span>を手に入れる番です。
+        スキルを磨くフェーズは終わった。<br>
+        次は<span class="gradient-text">シナリオ</span>を手に入れる番。
       </h2>
       <p class="fc-sub">
-        あなたの実力を、実力に見合った成果と自由に変換する。<br>
-        そのために必要な仕組みの全体像を、1本の無料動画で体系的にお伝えします。
+        実力に見合った成果と自由を手に入れる。<br>
+        その全体像を1本の動画でお伝えします。
       </p>
       <button class="cta-button" onclick="openModal()">月商8桁安定の仕組みを学ぶ</button>
       <p class="cta-micro">いますぐ無料講座で全体像を学ぶ</p>
