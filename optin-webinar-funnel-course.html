@@ -137,24 +137,15 @@
     .t-result{font-family:var(--font-display);font-size:20px;background:var(--grad-cta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
     .t-quote{font-size:13px;color:var(--warm);line-height:2.0;padding-left:14px;border-left:2px solid var(--sky)}
 
-    /* ===== INSTRUCTOR ===== */
-    .instructor{position:relative}
+    /* ===== INSTRUCTOR (compact) ===== */
+    .instructor{background:var(--dark);padding:48px 20px;position:relative}
     .instructor::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-subtle)}
-    .instructor-split{display:grid;grid-template-columns:1fr 1fr}
-    .instructor-left{background:var(--dark);padding:clamp(40px,5vw,64px);color:#fff;position:relative;overflow:hidden}
-    .instructor-left::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--grad-funnel)}
-    .instructor-left::after{content:'';position:absolute;bottom:0;right:0;width:200px;height:200px;background:radial-gradient(circle,rgba(107,184,224,.08),rgba(123,142,200,.04) 40%,transparent 70%)}
-    .il-photo{width:140px;height:140px;border-radius:20px;overflow:hidden;margin-bottom:20px;box-shadow:0 8px 24px rgba(0,0,0,.3);border:3px solid rgba(107,184,224,.2)}
+    .instructor-card{max-width:600px;margin:0 auto;display:flex;align-items:center;gap:24px}
+    .il-photo{width:80px;height:80px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(107,184,224,.2)}
     .il-photo img{width:100%;height:100%;object-fit:cover}
-    .il-label{font-size:9px;font-weight:700;letter-spacing:3px;color:var(--sky);text-transform:uppercase;margin-bottom:16px}
-    .il-name{font-family:var(--font-display);font-size:clamp(24px,3vw,32px);line-height:1.3;margin-bottom:16px}
-    .il-bio{font-size:13px;line-height:2.2;color:rgba(255,255,255,.5)}
-    .il-bio .hl{color:var(--sky);font-weight:600}
-    .instructor-right{background:var(--light);padding:clamp(40px,5vw,64px)}
-    .instructor-right .speaker-bio{list-style:none;display:flex;flex-direction:column;gap:12px}
-    .instructor-right .speaker-bio li{font-size:13px;color:var(--warm);line-height:1.8;padding-left:16px;position:relative}
-    .instructor-right .speaker-bio li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:2px;background:var(--sky);border-radius:2px}
-    .instructor-right .speaker-bio li strong{color:var(--charcoal);font-weight:700}
+    .il-text{color:rgba(255,255,255,.6);font-size:13px;line-height:1.8}
+    .il-name{font-family:var(--font-display);font-size:20px;color:#fff;line-height:1.3;margin-bottom:2px}
+    .il-role{font-size:11px;color:var(--sky);font-weight:600;margin-bottom:8px}
 
     /* ===== FINAL CTA ===== */
     .final-cta{background:var(--dark);padding:80px 0;text-align:center;position:relative;overflow:hidden}
@@ -192,7 +183,7 @@
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px){
-      .instructor-split{grid-template-columns:1fr}
+      .instructor-card{flex-direction:column;text-align:center}
       .proof-strip{grid-template-columns:repeat(3,1fr)}
       .ps-item{padding:16px 6px}
       .benefit-grid{grid-template-columns:1fr}
@@ -425,31 +416,14 @@
     </div>
   </section>
 
-  <!-- INSTRUCTOR -->
+  <!-- INSTRUCTOR (compact) -->
   <section class="instructor fade-in">
-    <div class="instructor-split">
-      <div class="instructor-left">
-        <div class="il-photo"><img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/8S1M0E33sR2V/RkKRYKTSrEB29xfZGoiIezRJT2BJ5DwNGiETdNJv.jpg" alt="大賀 聖也" loading="lazy"></div>
-        <div class="il-label">Instructor</div>
+    <div class="instructor-card">
+      <div class="il-photo"><img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/8S1M0E33sR2V/RkKRYKTSrEB29xfZGoiIezRJT2BJ5DwNGiETdNJv.jpg" alt="大賀 聖也" loading="lazy"></div>
+      <div class="il-text">
         <h3 class="il-name">大賀 聖也</h3>
-        <p class="il-bio">
-          (株)LASTPASS 代表取締役。<span class="hl">売れっ子たちのメンター</span>。<br><br>
-          元リクルートで25歳の時にWEB起業。海外ファネルマーケティングを現地まで出向いて研究し、<span class="hl">ハイチケットファネル&reg;</span>を開発。自分のビジネスでも実践して<span class="hl">億単位の売上安定化</span>に成功。<br><br>
-          現在は女性起業家やSNSクリエイター、インフルエンサー向けに「消耗せずに高利益で売れ続けるシナリオ」で本当にやりたかったことを形にするのを支援。<br><br>
-          <span class="hl">4年間ずっと平日毎朝8:45からZOOMグルコンを継続</span>してみんなのビジネス相談に乗った結果、顧問生の9割が最高月商を更新。<br><br>
-          そのほか、累計売上100億OverのAI系大手のマーケティング統括、Google AIエンジニアとAXツールの自社開発中。売り方に悩む人をゼロにする事業を楽しくやってます。
-        </p>
-      </div>
-      <div class="instructor-right">
-        <ul class="speaker-bio">
-          <li>海外ファネルマーケティングを<strong>日本一</strong>研究して実践</li>
-          <li>Funnel Hacking Live（海外・4,000名規模）<strong>現地参加</strong></li>
-          <li>SFC顧問先は<strong>43社以上</strong> / 100億Over企業も多数</li>
-          <li>大賀式ハイチケットファネル導入数 <strong>350社Over</strong></li>
-          <li>顧問先の最高月商更新率 <strong>93%</strong> / 平均売上UP <strong>5,421万Over</strong></li>
-          <li>顧問先の売上UPは累計 <strong>25億Over</strong> / 平均売上 <strong>3.1倍</strong></li>
-          <li>カンボジアに小学校を<strong>2校</strong>建設し現地大臣から表彰</li>
-        </ul>
+        <div class="il-role">(株)LASTPASS 代表 / ハイチケットファネル&reg; 開発者</div>
+        海外ファネル戦略を日本向けに体系化。顧問先43社+、ファネル導入350社Over、顧問先の93%が最高月商を更新。累計25億Overの売上UP支援。
       </div>
     </div>
   </section>
