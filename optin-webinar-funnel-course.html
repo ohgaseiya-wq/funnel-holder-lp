@@ -138,19 +138,24 @@
     .t-quote{font-size:13px;color:var(--warm);line-height:2.0;padding-left:14px;border-left:2px solid var(--sky)}
 
     /* ===== INSTRUCTOR ===== */
-    .instructor{background:var(--snow);padding:56px 20px;position:relative}
+    .instructor{background:var(--snow);padding:64px 20px;position:relative}
     .instructor::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-subtle)}
-    .instructor-header{text-align:center;margin-bottom:32px}
-    .instructor-title{font-family:var(--font-headline);font-size:20px;font-weight:900;display:inline-block;position:relative}
-    .instructor-title::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);width:48px;height:3px;background:var(--grad-horizon);border-radius:2px}
-    .instructor-card{max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--mist);border-radius:20px;padding:36px;box-shadow:0 4px 20px rgba(107,184,224,.06);display:flex;align-items:center;gap:32px}
-    .il-photo{width:120px;height:120px;border-radius:16px;overflow:hidden;flex-shrink:0;box-shadow:0 6px 20px rgba(0,0,0,.08);border:3px solid #fff}
+    .instructor-inner{max-width:800px;margin:0 auto}
+    .instructor-top{display:flex;align-items:center;gap:32px;margin-bottom:28px}
+    .il-photo{width:160px;height:160px;border-radius:20px;overflow:hidden;flex-shrink:0;box-shadow:0 8px 28px rgba(0,0,0,.1);border:3px solid #fff}
     .il-photo img{width:100%;height:100%;object-fit:cover}
-    .il-text{flex:1}
-    .il-name{font-family:var(--font-headline);font-size:20px;font-weight:900;color:var(--charcoal);margin-bottom:2px}
-    .il-role{font-size:12px;font-weight:600;background:var(--grad-cta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;display:inline-block}
-    .il-bio{font-size:13px;color:var(--warm);line-height:1.9}
-    .il-bio strong{color:var(--charcoal);font-weight:700}
+    .il-intro{flex:1}
+    .il-eyebrow{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;background:var(--grad-cta);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;display:inline-block}
+    .il-name{font-family:var(--font-headline);font-size:24px;font-weight:900;color:var(--charcoal);margin-bottom:4px}
+    .il-role{font-size:13px;font-weight:600;color:var(--warm);margin-bottom:12px}
+    .il-bio{font-size:14px;color:var(--charcoal);line-height:2.0}
+    .il-bio .hl{color:var(--sky);font-weight:700}
+    .il-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:24px}
+    .il-stat{text-align:center;padding:16px 8px;background:#fff;border:1px solid var(--mist)}
+    .il-stat:first-child{border-radius:8px 0 0 8px}
+    .il-stat:last-child{border-radius:0 8px 8px 0}
+    .il-stat-num{font-family:var(--font-display);font-size:clamp(16px,3vw,22px);background:var(--grad-funnel);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1.2}
+    .il-stat-label{font-size:10px;color:var(--dim);margin-top:4px;line-height:1.3}
 
     /* ===== FINAL CTA ===== */
     .final-cta{background:var(--dark);padding:80px 0;text-align:center;position:relative;overflow:hidden}
@@ -188,9 +193,14 @@
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px){
-      .instructor-card{flex-direction:column;text-align:center;padding:28px 20px;gap:20px}
-      .il-photo{width:100px;height:100px;margin:0 auto}
+      .instructor-top{flex-direction:column;text-align:center;gap:20px}
+      .il-photo{width:140px;height:140px;margin:0 auto}
       .il-bio{text-align:left}
+      .il-stats{grid-template-columns:repeat(2,1fr)}
+      .il-stat:first-child{border-radius:8px 0 0 0}
+      .il-stat:nth-child(2){border-radius:0 8px 0 0}
+      .il-stat:nth-child(3){border-radius:0 0 0 8px}
+      .il-stat:last-child{border-radius:0 0 8px 0}
       .proof-strip{grid-template-columns:repeat(3,1fr)}
       .ps-item{padding:16px 6px}
       .benefit-grid{grid-template-columns:1fr}
@@ -425,13 +435,23 @@
 
   <!-- INSTRUCTOR -->
   <section class="instructor fade-in">
-    <div class="instructor-header"><h2 class="instructor-title">講師</h2></div>
-    <div class="instructor-card">
-      <div class="il-photo"><img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/8S1M0E33sR2V/RkKRYKTSrEB29xfZGoiIezRJT2BJ5DwNGiETdNJv.jpg" alt="大賀 聖也" loading="lazy"></div>
-      <div class="il-text">
-        <h3 class="il-name">大賀 聖也</h3>
-        <div class="il-role">(株)LASTPASS 代表取締役 / 売れっ子たちのメンター</div>
-        <p class="il-bio">海外ファネルマーケティングを現地で研究し、ハイチケットファネル&reg;を開発。顧問先<strong>43社+</strong>、ファネル導入<strong>350社Over</strong>、顧問先の<strong>93%</strong>が最高月商を更新。累計<strong>25億Over</strong>の売上UP支援。</p>
+    <div class="instructor-inner">
+      <div class="instructor-top">
+        <div class="il-photo"><img src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/4l4loaB7HFos/8S1M0E33sR2V/RkKRYKTSrEB29xfZGoiIezRJT2BJ5DwNGiETdNJv.jpg" alt="大賀 聖也" loading="lazy"></div>
+        <div class="il-intro">
+          <div class="il-eyebrow">Instructor</div>
+          <h3 class="il-name">大賀 聖也</h3>
+          <div class="il-role">(株)LASTPASS 代表取締役 / 売れっ子たちのメンター</div>
+          <p class="il-bio">
+            海外ファネルマーケティングをラスベガスまで出向いて研究し、ハイチケットファネル&reg;を開発。自分のビジネスでも実践して億単位の売上安定化に成功。<span class="hl">4年間ずっと平日毎朝8:45からZOOMで顧問生のビジネス相談に乗り続け</span>、その結果、顧問生の9割が最高月商を更新。
+          </p>
+        </div>
+      </div>
+      <div class="il-stats">
+        <div class="il-stat"><span class="il-stat-num">43社+</span><span class="il-stat-label">顧問先企業数</span></div>
+        <div class="il-stat"><span class="il-stat-num">350社+</span><span class="il-stat-label">ファネル導入数</span></div>
+        <div class="il-stat"><span class="il-stat-num">93%</span><span class="il-stat-label">最高月商更新率</span></div>
+        <div class="il-stat"><span class="il-stat-num">25億+</span><span class="il-stat-label">累計売上UP支援</span></div>
       </div>
     </div>
   </section>
