@@ -191,6 +191,15 @@
     .footer-links a:hover{color:var(--sky)}
     .footer p.copy{font-size:10px;color:rgba(255,255,255,.15);margin-top:12px;letter-spacing:1px}
 
+    /* ===== STICKY BOTTOM BAR ===== */
+    .sticky-bar{position:fixed;bottom:0;left:0;right:0;background:var(--dark);border-top:2px solid rgba(107,184,224,.2);padding:10px 20px;display:flex;align-items:center;justify-content:center;gap:16px;z-index:100;transform:translateY(100%);transition:transform .4s ease}
+    .sticky-bar.is-visible{transform:translateY(0)}
+    .sticky-bar-text{color:rgba(255,255,255,.6);font-size:12px;font-weight:500;display:none}
+    .sticky-bar-btn{padding:12px 32px;background:var(--grad-cta);color:#fff;font-family:var(--font-headline);font-weight:700;font-size:14px;border:none;border-radius:10px;cursor:pointer;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;letter-spacing:.02em}
+    .sticky-bar-btn:hover{transform:scale(1.03);box-shadow:0 4px 20px rgba(107,184,224,.35)}
+    .sticky-bar-btn::before{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}
+    .sticky-bar-btn:hover::before{left:120%}
+
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px){
       .instructor-top{flex-direction:column;text-align:center;gap:20px}
@@ -216,6 +225,10 @@
       .fc-sub{font-size:13px!important}
       .modal-heading{font-size:17px!important}
       .modal-submit{font-size:15px!important}
+      body{padding-bottom:56px}
+      .sticky-bar-text{display:block}
+      .sticky-bar{gap:12px;padding:8px 16px}
+      .sticky-bar-btn{font-size:13px;padding:10px 20px}
     }
   </style>
 </head>
@@ -473,6 +486,12 @@
     </div>
   </section>
 
+  <!-- STICKY BOTTOM BAR -->
+  <div class="sticky-bar" id="sticky-bar">
+    <span class="sticky-bar-text">無料で仕組みを学ぶ</span>
+    <button class="sticky-bar-btn" onclick="openModal()">月商8桁安定の仕組みを学ぶ</button>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="f-brand">Funnel Holder&reg;</div>
@@ -510,6 +529,13 @@
     // Fade-in
     const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('is-visible')})},{threshold:.1});
     document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+
+    // Sticky bar: show after scrolling past hero
+    var stickyBar=document.getElementById('sticky-bar');
+    window.addEventListener('scroll',function(){
+      if(window.scrollY>600){stickyBar.classList.add('is-visible')}
+      else{stickyBar.classList.remove('is-visible')}
+    });
   </script>
 </body>
 </html>
