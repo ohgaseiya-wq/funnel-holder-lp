@@ -69,10 +69,10 @@
 
     /* Proof strip */
     .proof-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid rgba(255,255,255,.06)}
-    .ps-item{text-align:center;padding:24px 12px;border-right:1px solid rgba(255,255,255,.06)}
+    .ps-item{text-align:center;padding:20px 8px;border-right:1px solid rgba(255,255,255,.06)}
     .ps-item:last-child{border-right:none}
-    .ps-number{font-family:var(--font-display);font-size:clamp(22px,4vw,30px);background:var(--grad-funnel);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1.2}
-    .ps-label{font-size:11px;color:rgba(255,255,255,.35);margin-top:4px;letter-spacing:.5px;line-height:1.4}
+    .ps-number{font-family:var(--font-display);font-size:clamp(18px,3.5vw,30px);background:var(--grad-funnel);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1.2}
+    .ps-label{font-size:clamp(9px,2vw,11px);color:rgba(255,255,255,.35);margin-top:4px;letter-spacing:.3px;line-height:1.4}
 
     /* ===== PAIN ===== */
     .pain{background:var(--light);padding:80px 0;position:relative}
@@ -191,7 +191,8 @@
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px){
       .instructor-split{grid-template-columns:1fr}
-      .proof-strip{grid-template-columns:1fr}
+      .proof-strip{grid-template-columns:repeat(3,1fr)}
+      .ps-item{padding:16px 6px}
       .benefit-grid{grid-template-columns:1fr}
       .curriculum-item{grid-template-columns:60px 1fr}
     }
@@ -201,7 +202,7 @@
 
   <!-- TOP BAR -->
   <div class="top-bar">
-    <p>これは実話です：<strong class="tb-accent">33ヶ月連続で月商8桁</strong>を安定化させた<strong>仕組みの設計図</strong></p>
+    <p>これは実話です：SNS投稿・セミナーなしで<strong class="tb-accent">33ヶ月連続で月商8桁</strong>を安定化させた<strong>仕組みの設計図</strong></p>
   </div>
 
   <!-- HERO -->
@@ -210,14 +211,13 @@
     <div class="container hero-inner">
       <div class="eyebrow">Free Online Course</div>
       <h1 class="hero-headline">
-        <em>自動化ファネルが24時間365日</em><br>
-        商品単価もさらに値上げしても<br>
-        「申し込むつもりで来ました」という<br>
-        最高のお客さんを毎日集める全手順を無料公開
+        SNSに人生を捧げなくても<br>
+        <em>超高単価を24時間365日販売する</em><br>
+        売れ続けるシナリオ設計の全手順
       </h1>
       <p class="hero-sub">
-        あなたの実力は十分です。<strong>足りないのは「売れ続けるシナリオ」だけ。</strong><br>
-        たった1つの仕組みを手に入れるだけで、SNS投稿ゼロでもファネルが自動で集客・教育・販売を行い、来月の売上が「計算」できる状態になります。
+        いまよりも<strong>3倍〜10倍値上げ</strong>しても「いますぐやります」といわれて、<br>
+        大好きなお客さんに囲まれる<strong>秘密の集客戦略</strong>を無料公開します。
       </p>
       <button class="cta-button" onclick="openModal()">
         月商8桁安定の仕組みを学ぶ
